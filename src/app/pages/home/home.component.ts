@@ -8,6 +8,9 @@
 
 import { Component, OnInit } from '@angular/core';
 
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { AgeDialogComponent } from "../age-dialog/age-dialog.component";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,9 +18,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog,) { }
 
   ngOnInit() {
+    this.openDialog()
   }
 
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    const beerDialog = this.dialog.open(AgeDialogComponent, {
+      width: "40%",
+      height: "40%",
+      disableClose: true
+    });
+  }
 }

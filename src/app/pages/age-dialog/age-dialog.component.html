@@ -1,0 +1,29 @@
+<!--
+============================================
+; Title: RW Punk API Technical Challenge
+; Author: Jason Sullenger
+; Date: 11/01/2020
+; Description: General Website. Calls Punk API.
+; Users can filter and search.
+;===========================================
+-->
+
+<div>
+  <h2 mat-dialog-title>Age Dialog</h2>
+  <div *ngIf="!underAge">
+    <mat-dialog-content>
+      <p>Are you <strong>21 or older</strong>?</p>
+    </mat-dialog-content>
+  </div>
+  <div *ngIf="underAge == true">
+    <mat-dialog-content>
+      <h6>Sorry, you must be 21 to enter this site.</h6>
+    </mat-dialog-content>
+  </div>
+  <div *ngIf="!underAge">
+    <mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close color="primary">Yes</button>
+      <button mat-raised-button color="warn" (click)="not21()">No</button>
+    </mat-dialog-actions>
+  </div>
+</div>

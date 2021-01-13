@@ -83,14 +83,11 @@ export class BeerResultsComponent implements OnInit {
 
   openDialog(beer) {
     const dialogConfig = new MatDialogConfig();
-
     const beerDialog = this.dialog.open(BeerDialogComponent, {
       width: "40%",
       height: "90%",
       data: beer,
     });
-
-    //beerDialog.componentInstance.beerResult = this.beerList;
   }
 
   pagination(pgNum) {

@@ -7,6 +7,7 @@
 // ;===========================================
 
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { BeerDialogComponent } from './pages/beer-dialog/beer-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'
 import { FlexLayoutModule } from '@angular/flex-layout'
+import { AgeDialogComponent } from './pages/age-dialog/age-dialog.component'
 
 // Angular Material Start
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
@@ -39,7 +41,8 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion'
-import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 //import { MatPaginatorModule } from '@angular/material/paginator';
 // Angular Material Finish
@@ -53,10 +56,12 @@ import { MatSidenavModule } from '@angular/material/sidenav'
     FooterComponent,
     ContactUsComponent,
     AboutUsComponent,
-    BeerDialogComponent
+    BeerDialogComponent,
+    AgeDialogComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
