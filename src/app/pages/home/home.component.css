@@ -1,4 +1,4 @@
-.homePage {
+ .homePage {
   margin: 75px auto;
   width: 60%;
   height: 500px;
@@ -14,7 +14,7 @@
 
 .carousel {
   width: 55%;
-  margin: 50px 60%;
+  margin: 10% 150px;
 }
 
 .carousel-caption {
