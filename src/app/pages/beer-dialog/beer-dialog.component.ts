@@ -7,7 +7,8 @@
 // ;===========================================
 
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA, MatExpansionModule } from "@angular/material";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { Router } from "@angular/router";
 //import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { BeerResultsComponent } from '../beer-results/beer-results.component';

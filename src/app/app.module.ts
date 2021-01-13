@@ -25,9 +25,10 @@ import { FormsModule } from '@angular/forms'
 import { FlexLayoutModule } from '@angular/flex-layout'
 
 // Angular Material Start
-import { MatSlideToggleModule} from "@angular/material";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatTableModule, MatDialogModule } from "@angular/material";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule, matMenuAnimations } from "@angular/material/menu";
