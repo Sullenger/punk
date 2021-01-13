@@ -1,0 +1,19 @@
+.animatedLogo{
+  margin: 5px 15% 10px 15%;
+  width: 70%;
+}
+.ageDialog{
+  background-color: #F6F2F2;
+}
+.ageActions{
+  margin: 0px 30% 0px 30%;
+  width: 40%;
+}
+
+#alignCenter{
+  text-align: center;
+}
+#buttonMargin{
+  margin-left: 10px;
+  margin-right: 10px;
+}

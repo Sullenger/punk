@@ -26,3 +26,6 @@ $rw-Punk-Challenge-theme: mat-light-theme($rw-Punk-Challenge-primary, $rw-Punk-C
 // that you are using.
 @include angular-material-theme($rw-Punk-Challenge-theme);
 
+.custom-Age-Dialog >  mat-dialog-container {
+  background: #F6F2F2;
+}

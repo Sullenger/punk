@@ -8,71 +8,101 @@
 ;===========================================
 -->
 
-<div class="navigation">
+<div class="navMenu">
   <header>
-    <!-- Navbar -->
     <mat-toolbar class="menu" role="header" color="primary">
       <mat-toolbar-row>
-        <div fxFlex></div>
-
-        <button
-          mat-icon-button
-          class="toolbar__icon-button"
-          [matMenuTriggerFor]="menu"
-        >
-          <mat-icon>menu</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <!-- Home -->
-          <button
-            mat-button
-            class="toolbar__icon-button mat-button"
-            (click)="navigateHome()"
-          >
-            <mat-icon>home</mat-icon>
+        <img
+          src="../../assets/images/sully-Logo-Wide.png"
+          alt="Alternate logo for Sully Selections"
+          class="logoWide"
+        />
+        <div class="navigation">
+          <button mat-button (click)="navigateHome()">
+            <mat-icon id="iconMargin">home</mat-icon>
             <span>Home</span>
           </button>
-          <br>
-          <!-- Beer List -->
-          <button
-            mat-button
-            class="toolbar__icon-button mat-button"
-            (click)="navigateBeerList()"
-          >
-            <mat-icon>local_drink</mat-icon>
+
+          <button mat-button (click)="navigateBeerList()">
+            <mat-icon id="iconMargin">local_drink</mat-icon>
             <span>Available Beer</span>
           </button>
-          <br>
-          <!-- About Us -->
-          <button
-            mat-button
-            class="toolbar__icon-button mat-button"
-            (click)="navigateAbout()"
-          >
-            <mat-icon>business</mat-icon>
+
+          <button mat-button (click)="navigateAbout()">
+            <mat-icon id="iconMargin">business</mat-icon>
             <span>About Us</span>
           </button>
-          <br>
-          <!-- Contact Us -->
-          <button
-            mat-button
-            class="toolbar__icon-button mat-button"
-            (click)="navigateContact()"
-          >
-            <mat-icon>email</mat-icon>
+
+          <button mat-button (click)="navigateContact()">
+            <mat-icon id="iconMargin">email</mat-icon>
             <span>Contact Us</span>
           </button>
-        </mat-menu>
-
-        <!-- Home -->
-        <button
-          mat-button
-          class="toolbar__icon-button mat-button"
-          (click)="navigateHome()"
-        >
-          <span><h3>Beer Revolution</h3></span>
-        </button>
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
   </header>
 </div>
+
+<!-- <mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <div fxFlex></div>
+
+    <button
+      mat-icon-button
+      class="toolbar__icon-button"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+      <button
+        mat-button
+        class="toolbar__icon-button mat-button"
+        (click)="navigateHome()"
+      >
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <br>
+
+      <button
+        mat-button
+        class="toolbar__icon-button mat-button"
+        (click)="navigateBeerList()"
+      >
+        <mat-icon>local_drink</mat-icon>
+        <span>Available Beer</span>
+      </button>
+      <br>
+
+      <button
+        mat-button
+        class="toolbar__icon-button mat-button"
+        (click)="navigateAbout()"
+      >
+        <mat-icon>business</mat-icon>
+        <span>About Us</span>
+      </button>
+      <br>
+
+      <button
+        mat-button
+        class="toolbar__icon-button mat-button"
+        (click)="navigateContact()"
+      >
+        <mat-icon>email</mat-icon>
+        <span>Contact Us</span>
+      </button>
+    </mat-menu>
+
+
+    <button
+      mat-button
+      class="toolbar__icon-button mat-button"
+      (click)="navigateHome()"
+    >
+      <span><h3>Beer Revolution</h3></span>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar> -->

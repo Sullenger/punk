@@ -1,0 +1,20 @@
+.menu {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logoWide {
+  width: 225px;
+  margin-top: 25px;
+}
+
+#iconMargin {
+  margin-right: 7px;
+}
+
+.navigation {
+  margin-top: 75px;
+  margin-left: 40%;
+}

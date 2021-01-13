@@ -10,7 +10,7 @@ import { Component, OnInit } from "@angular/core";
 import { APICallService } from "../../apicall.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { BeerDialogComponent } from "../beer-dialog/beer-dialog.component";
-import { Router } from "@angular/router";
+// import { Router } from "@angular/router";
 
 @Component({
   selector: "app-beer-results",
@@ -21,6 +21,7 @@ export class BeerResultsComponent implements OnInit {
   beerList: any;
   pageNumber: any;
   panelOpenState = false;
+  prevDisable: boolean = true;
   // public beerResult
   selectedFilter: any = {
     alcoholContent: "",
@@ -30,7 +31,7 @@ export class BeerResultsComponent implements OnInit {
   constructor(
     private api: APICallService,
     public dialog: MatDialog,
-    private router: Router
+    // private router: Router
   ) {}
 
   public applyFilter(event, selection) {
@@ -92,7 +93,7 @@ export class BeerResultsComponent implements OnInit {
 
   pagination(pgNum) {
     this.pageNumber = pgNum;
-    console.log(this.selectedFilter)
+    console.log(this.selectedFilter);
     if (this.selectedFilter) {
       this.api.callNextPage(pgNum, this.selectedFilter).subscribe((data) => {
         this.beerList = data;
@@ -101,6 +102,11 @@ export class BeerResultsComponent implements OnInit {
       this.api.callNextPage(pgNum, null).subscribe((data) => {
         this.beerList = data;
       });
+    }
+    if (this.pageNumber !== 1) {
+      this.prevDisable = false;
+    } else {
+      this.prevDisable = true;
     }
   }
 
@@ -115,9 +121,11 @@ export class BeerResultsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.pageNumber = 1;
     this.api.callAPI().subscribe((data) => {
       this.beerList = data;
     });
-    this.pageNumber = 1;
   }
+
+  clickDisable() {}
 }

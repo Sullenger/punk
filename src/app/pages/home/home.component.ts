@@ -7,7 +7,7 @@
 // ;===========================================
 
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { AgeDialogComponent } from "../age-dialog/age-dialog.component";
 
@@ -18,18 +18,25 @@ import { AgeDialogComponent } from "../age-dialog/age-dialog.component";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,) { }
+  constructor(public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
-    this.openDialog()
+    // Reactivate when done testing
+    // this.openDialog()
   }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     const beerDialog = this.dialog.open(AgeDialogComponent, {
-      width: "40%",
-      height: "40%",
-      disableClose: true
+      width: "30%",
+      height: "60%",
+      disableClose: true,
+      panelClass: 'custom-Age-Dialog',
+      backdropClass: 'backdropBackground'
     });
+  }
+
+  navigateAbout(){
+    this.router.navigate(["./about-us"]);
   }
 }

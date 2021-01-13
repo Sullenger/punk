@@ -9,3 +9,9 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: lightgrey;
 }
+
+.backdropBackground {
+  /* filter: blur(250px); */
+  background-color: black;
+  opacity: 0.85 !important;
+}
