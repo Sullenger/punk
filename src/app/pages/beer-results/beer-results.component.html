@@ -1,0 +1,112 @@
+<!--
+============================================
+; Title: RW Punk API Technical Challenge
+; Author: Jason Sullenger
+; Date: 11/01/2020
+; Description: General Website. Calls Punk API.
+; Users can filter and search.
+;===========================================
+-->
+
+<div class="beerPage" id="textCenter">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="example-sidenav-content, filterHeader">
+          <h6
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+          >
+            Filters
+          </h6>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <!-- Filter -->
+    <div class="form">
+      <!-- Search Input -->
+      <mat-form-field appearance="fill" class="example-form-field, filter">
+        <mat-label>Search</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="selectedFilter.name"
+          (keydown)="applyFilter($event, selectedFilter)"
+        />
+        <button
+          mat-button
+          *ngIf="selectedFilter.name"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearedSearch()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- Alcohol Select -->
+      <mat-form-field appearance="fill" class="example-form-field, filter">
+        <mat-label>Alcohol Content</mat-label>
+        <select
+          matNativeControl
+          [(ngModel)]="selectedFilter.alcoholContent"
+          (click)="applyFilter($event, selectedFilter)"
+        >
+          <option value="" selected (click)="clearedSelect()"></option>
+          <option value="Greater">Greater than 5%</option>
+          <option value="Lesser">Less than 5%</option>
+        </select>
+      </mat-form-field>
+      <br />
+    </div>
+  </mat-expansion-panel>
+
+  <!-- Beer List --><mat-grid-list cols="3" rowHeight="1:1">
+    <div class="beer-card" *ngFor="let beer of beerList">
+      <mat-grid-tile>
+        <button class="beerTile" mat-raised-button (click)="openDialog(beer)">
+          <mat-card id="textCenter">
+            <img
+              mat-card-image
+              src="{{ beer.image_url }}"
+              alt="Image of {{ beer.name }} bottle"
+              class="beerImage"
+            />
+            <hr />
+            <mat-card-header id="justify">
+              <mat-card-title>{{ beer.name }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{ beer.tagline }}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <!-- <button mat-button>LIKE</button> -->
+            </mat-card-actions>
+          </mat-card>
+        </button>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  <!-- Pagination -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" (click)="previousPage()">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link">Page {{ pageNumber }}</a>
+      </li>
+      <!-- <li class="page-item"><a class="page-link" (click)="pagination(1)">1</a></li>
+      <li class="page-item"><a class="page-link" (click)="pagination(2)">2</a></li>
+      <li class="page-item"><a class="page-link" (click)="pagination(3)">3</a></li> -->
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- End Pagination -->
+</div>

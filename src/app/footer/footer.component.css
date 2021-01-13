@@ -1,0 +1,7 @@
+.footer{
+  width: 100%;
+  text-align: center;
+  display: grid;
+  /* position: absolute; */
+  bottom: 10px;
+}

@@ -1,0 +1,44 @@
+<!--
+============================================
+; Title: RW Punk API Technical Challenge
+; Author: Jason Sullenger
+; Date: 11/01/2020
+; Description: General Website. Calls Punk API.
+; Users can filter and search.
+;===========================================
+-->
+
+<div *ngIf="data">
+  <h2 mat-dialog-title>{{ data.name }}</h2>
+  <mat-dialog-content>
+    <img
+      src="{{ data.image_url }}"
+      alt="Image of {{ data.name }} bottle"
+      id="dialogImage"
+    />
+    <ul>
+      <li>Originated: {{ data.first_brewed }}</li>
+      <li>Alcohol by volume: {{ data.abv }}</li>
+      <li>Bitterness Levels: {{ data.ibu }}</li>
+      <li>Contributed by: {{ data.contributed_by }}</li>
+      <li>Pairs well with:</li>
+      <ul>
+        <li *ngFor="let food of data.food_pairing">{{ food }}</li>
+      </ul>
+      <li>Volume: {{ data.volume.value }} {{ data.volume.unit }}</li>
+    </ul>
+
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Description </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ data.description }}</p>
+    </mat-expansion-panel>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="accent">Close</button>
+  </mat-dialog-actions>
+</div>

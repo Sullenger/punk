@@ -1,0 +1,45 @@
+.beerImage{
+  width: 20%;
+}
+/* .beer-card{
+  margin: 25px;
+  width: 290px;
+  display: inline-block;
+} */
+#textCenter{
+  text-align: center;
+}
+#justify{
+  justify-content: center;
+}
+
+/* .beerTile {
+  width: 300px;
+  height: 350px;
+} */
+
+.filter{
+  margin: 5px 25px;
+}
+
+.form{
+  font-size: 16px;
+}
+
+.filterHeader{
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+/* button{
+  margin: 75px 75px;
+  width: 350px;
+  height: 420px;
+} */
+
+mat-grid-tile{
+  /* width: 350px;
+  height: 520px; */
+  /* margin: 25px 25px; */
+  background-color: lightblue;
+}

@@ -1,0 +1,39 @@
+.homePage {
+  margin: 75px auto;
+  width: 60%;
+  height: 500px;
+}
+
+.homeCard {
+  height: 95%;
+}
+
+.portfolioSection {
+  margin-top: 100px;
+}
+
+.carousel {
+  width: 55%;
+  margin: 50px 60%;
+}
+
+.carousel-caption {
+  background-color: rgba(192, 192, 192, 0.7);
+  border-radius: 5px;
+}
+
+.carousel-caption span {
+  color: black;
+}
+
+.carousel-control-prev-icon {
+  background-color: rgba(192, 192, 192, 0.9);
+  box-shadow: 0 0 15px 15px rgba(192, 192, 192, 0.3);
+  border-radius: 20px;
+}
+
+.carousel-control-next-icon {
+  background-color: rgba(192, 192, 192, 0.9);
+  box-shadow: 0 0 15px 15px rgba(192, 192, 192, 0.3);
+  border-radius: 20px;
+}
