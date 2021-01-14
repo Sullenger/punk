@@ -1,6 +1,10 @@
+.homePage{
+ margin-top: 150px;
+}
+
 .carousel {
   width: 40%;
-  margin: 150px 150px 50px 0px;
+  margin: 0px 150px 50px 0px;
 }
 
 .carousel-caption {
@@ -34,8 +38,10 @@
   margin-left: 40px;
 }
 
+/* Second Row */
 .secondRow{
 margin-left: 25px;
+margin-bottom: 50px;
 }
 
 .secondRowText {
@@ -68,19 +74,28 @@ margin-left: 25px;
   width: 75%;
 }
 
-/* #imageWidth:hover {
-} */
-
+/* Third Row */
 .thirdRow{
   text-align: center;
-}
-
-.thirdRowLeft{
+  padding-top: 15px;
   background-color: mediumturquoise;
-  height: 400px;
+  height: 350px;
+  margin: 0px auto;
 }
 
-.thirdRowRight{
-background-color: mediumorchid;
-height: 400px;
+.thirdRowSections{
+  height: 320px;
+  padding:20px;
+}
+
+.fa-2x{
+  color: green;
+}
+
+.marginBottom{
+ margin-bottom: 30px;
+}
+
+#fontLarge{
+  font-size: 20px;
 }

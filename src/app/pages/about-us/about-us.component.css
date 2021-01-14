@@ -1,8 +1,9 @@
 .aboutUs{
-  margin: 75px auto 13% auto;
-  width: 60%;
-  height: 500px;
+  margin: 125px auto 13% auto;
+  width: 80%;
+  height: 85%;
 }
-.aboutCard{
-  height: 95%;
+
+#aboutHeader{
+  text-align: right;
 }

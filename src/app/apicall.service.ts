@@ -15,6 +15,18 @@ import { HttpClient } from "@angular/common/http";
 export class APICallService {
   constructor(private http: HttpClient) {}
 
+  // Delete
+  // callMaxAPI() {
+  //   return this.http.get("https://api.punkapi.com/v2/beers?per_page=80");
+  // }
+
+  // callMaxNext(pgNum) {
+  //   return this.http.get(
+  //     "https://api.punkapi.com/v2/beers?page=" + pgNum + "&per_page=12"
+  //   );
+  // }
+// end Delete
+
   callAPI() {
     return this.http.get("https://api.punkapi.com/v2/beers?per_page=12");
   }

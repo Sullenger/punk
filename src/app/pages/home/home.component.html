@@ -7,7 +7,7 @@
 ; Users can filter and search.
 ;===========================================
 -->
-<div>
+<div class="homePage">
   <!-- First Row -->
   <div class="firstRow" fxLayout="row" fxLayoutAlign="space-between center">
     <div class="mainContent" fxFlex="35">
@@ -32,7 +32,12 @@
           distinctio numquam, recusandae facilis veniam? Quisquam, minus
           corrupti?
         </p>
-        <button id="storyButton" mat-raised-button (click)="navigateAbout()" color="primary">
+        <button
+          id="storyButton"
+          mat-raised-button
+          (click)="navigateAbout()"
+          color="primary"
+        >
           <span>The rest of the story</span>
         </button>
       </div>
@@ -153,19 +158,59 @@
       </p>
     </div>
     <div fxFlex="30" class="secondRowLogo">
-        <img id="imageWidth" src="../../../assets/images/sully-Logo.png" alt="">
+      <img id="imageWidth" src="../../../assets/images/sully-Logo.png" alt="" />
     </div>
   </div>
   <!-- Third Row -->
-  <div class="thirdRow" fxLayout="row" fxLayoutAlign="space-between center">
-    <div class="thirdRowLeft" fxFlex="50">
-      <h4>Left</h4>
-    </div>
-    <div class="thirdRowRight" fxFlex="50">
-      <h4>Right</h4>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="thirdRow" fxFlex="100">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="thirdRowSections" fxFlex="30">
+          <h4><u>Location & Hours</u></h4>
+          <br>
+          <address>
+            <strong>
+              123 Fake Address St
+              <br />
+              Anytown, ID 12345
+              <br />
+            </strong>
+          </address>
+          <hr />
+          <p><strong>Mon-Thu</strong> 10:00-8:00pm</p>
+          <p><strong>Fri & Sat</strong> 10:00-11:00pm</p>
+          <p><strong>Closed Sunday</strong></p>
+        </div>
+        <div class="thirdRowSections" fxFlex="30">
+          <h4 class="marginBottom"><u>Social Media</u></h4>
+          <a href=""><i class="far fa-envelope fa-2x"></i></a>
+          <br />
+          <a href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+          <br />
+          <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+          <br />
+          <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+          <br />
+          <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+          <br />
+        </div>
+        <div class="thirdRowSections" fxFlex="30">
+          <h4 class="marginBottom"><u>Additional Info</u></h4>
+          <a href="" id="fontLarge">News</a>
+          <br>
+          <a href="" id="fontLarge">Careers</a>
+          <br>
+          <a href="" id="fontLarge"> Support</a>
+          <br>
+          <a href="" id="fontLarge">FAQ</a>
+          <br>
+          <a href="" id="fontLarge">Privacy Policy</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 <!-- https://unsplash.com/s/photos/beer-bottle?orientation=landscape -->
 <!-- <span>Photo by <a href="https://unsplash.com/@fermanlatower?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
   Fernando Latorre</a> on <a href="https://unsplash.com/s/photos/beer-bottle?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">

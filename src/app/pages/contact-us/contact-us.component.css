@@ -1,9 +1,13 @@
 .contactUs{
-  margin: 75px auto 13% auto;
-  width: 60%;
-  height: 500px;
-}
-.contactCard{
-  height: 95%;
+  margin: 125px auto 18% auto;
+  width: 40%;
+  height: 300px;
 }
 
+.cardContent{
+ margin: 25px 25px;
+}
+
+.cardContent > div {
+  margin: 25px 50px;
+ }

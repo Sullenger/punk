@@ -124,6 +124,7 @@ export class BeerResultsComponent implements OnInit {
     this.pageNumber = 1;
     this.api.callAPI().subscribe((data) => {
       this.beerList = data;
+      console.log(data);
     });
   }
 
