@@ -1,12 +1,15 @@
 const express = require('express');
+const http = require('http')
 const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + './dist/rw-punk-challenge'));
+const port = process.env.PORT || 8080
 
-app.get('/*', function(req,res) {
-res.sendFile(path.join(__dirname+
-'/dist/rw-punk-challenge/index.html'));});
+app.use(express.static(__dirname + '/dist/rw-punk-challenge'));
 
-app.listen(process.env.PORT || 8080);
+app.get('/*', (req,res) => res.sendFile(path.join(__dirname)))
+
+const server = http.createServer(app)
+
+server.listen(port, () => console.log('Server Running'));
