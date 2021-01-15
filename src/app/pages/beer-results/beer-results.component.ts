@@ -100,7 +100,17 @@ export class BeerResultsComponent implements OnInit {
     const beerDialog = this.dialog.open(BeerDialogComponent, {
       width: "40%",
       height: "90%",
-      data: beer,
+      data: {
+        name: beer.name,
+        image_url: beer.image_url,
+        first_brewed: beer.first_brewed,
+        abv: beer.abv,
+        ibu: beer.ibu,
+        contributed_by: beer.contributed_by,
+        food_pairing: beer.food_pairing,
+        volume: beer.volume,
+        description: beer.description,
+      }
     });
   }
 

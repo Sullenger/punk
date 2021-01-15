@@ -55,7 +55,7 @@
             [(ngModel)]="selectedFilter.alcoholContent"
             (click)="applyFilter($event, selectedFilter)"
           >
-            <option value="" selected (click)="clearedSelect()"></option>
+            <option value="" selected></option>
             <option value="Greater">Greater than 5%</option>
             <option value="Lesser">Less than 5%</option>
           </select>
