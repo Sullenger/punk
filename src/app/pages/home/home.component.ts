@@ -6,23 +6,29 @@
 // ; Users can filter and search.
 // ;===========================================
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { AgeDialogComponent } from "../age-dialog/age-dialog.component";
+import { CookieService } from "ngx-cookie-service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-
-  constructor(public dialog: MatDialog, private router: Router) { }
+  constructor(
+    public dialog: MatDialog,
+    private router: Router,
+    private cookie: CookieService
+  ) {}
 
   ngOnInit() {
-    // Reactivate when done testing
-    // this.openDialog()
+    let authenticated = this.cookie.get("ageVerified");
+    if (!authenticated) {
+      this.openDialog();
+    }
   }
 
   openDialog() {
@@ -31,12 +37,12 @@ export class HomeComponent implements OnInit {
       width: "30%",
       height: "60%",
       disableClose: true,
-      panelClass: 'custom-Age-Dialog',
-      backdropClass: 'backdropBackground'
+      panelClass: "custom-Age-Dialog",
+      backdropClass: "backdropBackground",
     });
   }
 
-  navigateAbout(){
+  navigateAbout() {
     this.router.navigate(["./about-us"]);
   }
 }

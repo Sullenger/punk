@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { CookieService } from "ngx-cookie-service";
 // Components
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -80,7 +81,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     // MatTableModule,
     // End Angular Materials
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   entryComponents: [
     // BeerDialogComponent
