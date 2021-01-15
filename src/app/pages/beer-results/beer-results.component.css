@@ -1,4 +1,4 @@
-.beerPage{
+.beerPage {
   margin-top: 100px;
 }
 .beerImage {
@@ -9,13 +9,10 @@
   text-align: center;
 }
 
-.justify {
-  justify-content: center;
+.filter{
+  margin-right: 15px;
 }
 
-.filter {
-  margin: 5px 25px;
-}
 
 .form {
   font-size: 15px;
@@ -26,9 +23,22 @@
   margin-left: 50px;
 }
 
-/* mat-grid-tile {
-  width: 350px;
-  height: 520px;
-  margin: 25px 25px;
-  background-color: grey;
-} */
+.beerTile > div > img {
+  height: 300px;
+}
+
+.beer-card:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+}
+.pagDiv {
+  height: 100px;
+  background-color: #0097a7;
+  justify-content: center;
+  margin: auto auto;
+}
+
+.pagination {
+  padding-top: 30px;
+}

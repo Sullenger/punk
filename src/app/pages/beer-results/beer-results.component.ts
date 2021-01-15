@@ -10,7 +10,6 @@ import { Component, OnInit } from "@angular/core";
 import { APICallService } from "../../apicall.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { BeerDialogComponent } from "../beer-dialog/beer-dialog.component";
-// import { Router } from "@angular/router";
 
 @Component({
   selector: "app-beer-results",
@@ -22,7 +21,7 @@ export class BeerResultsComponent implements OnInit {
   pageNumber: any;
   panelOpenState = false;
   prevDisable: boolean = true;
-  // public beerResult
+  nextDisable: boolean = false;
   selectedFilter: any = {
     alcoholContent: "",
     name: "",
@@ -30,8 +29,7 @@ export class BeerResultsComponent implements OnInit {
 
   constructor(
     private api: APICallService,
-    public dialog: MatDialog,
-    // private router: Router
+    public dialog: MatDialog // private router: Router
   ) {}
 
   public applyFilter(event, selection) {
@@ -49,11 +47,13 @@ export class BeerResultsComponent implements OnInit {
         this.api.filterGreaterThan().subscribe((data) => {
           // Response from API Call
           console.log("API Greater Call", data), (this.beerList = data);
+          this.disableNext(data);
         });
       } else if (selection.alcoholContent == "Lesser") {
         this.api.filterLessThan().subscribe((data) => {
           // Response from API Call
           console.log("API Lesser Call", data), (this.beerList = data);
+          this.disableNext(data);
         });
       }
       this.pageNumber = 1;
@@ -61,6 +61,7 @@ export class BeerResultsComponent implements OnInit {
       this.api.callAPI().subscribe((data) => {
         // Response from API Call
         console.log("API Call", data), (this.beerList = data);
+        this.disableNext(data);
       });
       this.pageNumber = 1;
     } else if (selection.name) {
@@ -68,8 +69,19 @@ export class BeerResultsComponent implements OnInit {
       this.api.searchByName(this.selectedFilter.name).subscribe((data) => {
         // Response from API Call
         console.log("API Search Call", data), (this.beerList = data);
+        this.disableNext(data);
       });
       this.pageNumber = 1;
+    }
+  }
+
+  disableNext(data) {
+    let instance = Object.keys(data);
+    var length = instance.length;
+    if (length < 12) {
+      this.nextDisable = true;
+    } else {
+      this.nextDisable = false;
     }
   }
 
@@ -79,6 +91,7 @@ export class BeerResultsComponent implements OnInit {
       // Response from API Call
       // console.log('API Call', data),
       this.beerList = data;
+      this.disableNext(data);
     });
   }
 
@@ -97,10 +110,12 @@ export class BeerResultsComponent implements OnInit {
     if (this.selectedFilter) {
       this.api.callNextPage(pgNum, this.selectedFilter).subscribe((data) => {
         this.beerList = data;
+        this.disableNext(data);
       });
     } else {
       this.api.callNextPage(pgNum, null).subscribe((data) => {
         this.beerList = data;
+        this.disableNext(data);
       });
     }
     if (this.pageNumber !== 1) {
@@ -127,6 +142,4 @@ export class BeerResultsComponent implements OnInit {
       console.log(data);
     });
   }
-
-  clickDisable() {}
 }

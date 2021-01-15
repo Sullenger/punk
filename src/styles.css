@@ -1,17 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
+
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: lightgrey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .backdropBackground {
-  /* filter: blur(250px); */
   background-color: black;
-  opacity: 0.85 !important;
+  opacity: 0.9 !important;
 }

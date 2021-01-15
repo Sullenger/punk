@@ -36,25 +36,29 @@
 
 .bigText {
   margin-left: 40px;
+
 }
 
 /* Second Row */
 .secondRow{
 margin-left: 25px;
 margin-bottom: 50px;
+color:white;
 }
 
 .secondRowText {
-  background-color: mediumpurple;
-  border-radius: 50px;
+  background-color: #45A29E;
+  border-radius: 40px;
   padding: 30px;
   margin-bottom: 50px;
+  margin-right: 50px;
   box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
 }
 
 #storyButton{
+  color: white;
   margin-left: 50px;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -78,9 +82,10 @@ margin-bottom: 50px;
 .thirdRow{
   text-align: center;
   padding-top: 15px;
-  background-color: mediumturquoise;
+  background-color: #45A29E;
   height: 350px;
   margin: 0px auto;
+  color:white;
 }
 
 .thirdRowSections{
@@ -89,7 +94,8 @@ margin-bottom: 50px;
 }
 
 .fa-2x{
-  color: green;
+  color: white;
+  padding: 5px;
 }
 
 .marginBottom{
@@ -98,4 +104,8 @@ margin-bottom: 50px;
 
 #fontLarge{
   font-size: 20px;
+}
+
+a {
+  color: white;
 }

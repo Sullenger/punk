@@ -23,8 +23,22 @@
         <h6>Sorry, you must be 21 years or older to enter this site.</h6>
       </div>
       <div *ngIf="!underAge" class="ageActions">
-        <button mat-raised-button mat-dialog-close color="primary" id="buttonMargin">Yes</button>
-        <button mat-raised-button color="warn" (click)="not21()" id="buttonMargin">No</button>
+        <button
+          mat-raised-button
+          mat-dialog-close
+          color="secondary"
+          class="buttonYes buttonMargin"
+        >
+          Yes
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="not21()"
+          class="buttonMargin"
+        >
+          No
+        </button>
       </div>
     </mat-dialog-content>
   </div>

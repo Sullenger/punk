@@ -10,12 +10,13 @@
 
 <div class="navMenu">
   <header>
-    <mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar class="menu" role="header" color="warn">
       <mat-toolbar-row>
         <img
-          src="../../assets/images/sully-Logo-Wide.png"
+          src="../../assets/images/sully-Logo-Wide-Inverted.png"
           alt="Alternate logo for Sully Selections"
           class="logoWide"
+          (click)="navigateHome()"
         />
         <div class="navigation">
           <button mat-button (click)="navigateHome()">
@@ -42,67 +43,3 @@
     </mat-toolbar>
   </header>
 </div>
-
-<!-- <mat-toolbar class="menu" role="header" color="primary">
-  <mat-toolbar-row>
-    <div fxFlex></div>
-
-    <button
-      mat-icon-button
-      class="toolbar__icon-button"
-      [matMenuTriggerFor]="menu"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-
-      <button
-        mat-button
-        class="toolbar__icon-button mat-button"
-        (click)="navigateHome()"
-      >
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button>
-      <br>
-
-      <button
-        mat-button
-        class="toolbar__icon-button mat-button"
-        (click)="navigateBeerList()"
-      >
-        <mat-icon>local_drink</mat-icon>
-        <span>Available Beer</span>
-      </button>
-      <br>
-
-      <button
-        mat-button
-        class="toolbar__icon-button mat-button"
-        (click)="navigateAbout()"
-      >
-        <mat-icon>business</mat-icon>
-        <span>About Us</span>
-      </button>
-      <br>
-
-      <button
-        mat-button
-        class="toolbar__icon-button mat-button"
-        (click)="navigateContact()"
-      >
-        <mat-icon>email</mat-icon>
-        <span>Contact Us</span>
-      </button>
-    </mat-menu>
-
-
-    <button
-      mat-button
-      class="toolbar__icon-button mat-button"
-      (click)="navigateHome()"
-    >
-      <span><h3>Beer Revolution</h3></span>
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar> -->

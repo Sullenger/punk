@@ -1,14 +1,8 @@
-/* .footer{
+.footer{
+  height: 40px;
   margin-top: 50px;
   width: 100%;
   text-align: center;
   display: grid;
-  position: absolute;
-  bottom: 10px;
-} */
-.menu {
-  height: 100px;
-  position: fixed;
   top: 100;
-  z-index: 1000;
 }

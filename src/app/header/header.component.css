@@ -3,18 +3,29 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  color: white;
 }
 
 .logoWide {
   width: 225px;
   margin-top: 25px;
+  border-radius: 10px;
 }
 
-#iconMargin {
-  margin-right: 7px;
+.logoWide:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navigation {
   margin-top: 75px;
   margin-left: 30%;
+}
+
+#iconMargin {
+  margin-right: 7px;
 }

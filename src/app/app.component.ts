@@ -6,22 +6,20 @@
 // ; Users can filter and search.
 // ;===========================================
 
-import { Component } from '@angular/core';
-import { APICallService } from './apicall.service'
+import { Component } from "@angular/core";
+import { APICallService } from "./apicall.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'rw-Punk-Challenge';
+  title = "rw-Punk-Challenge";
 
   beerList: any;
 
-  constructor(private api:APICallService){
+  constructor(private api: APICallService) {}
 
-  }
-
-  ngOnInit(){  }
+  ngOnInit() {}
 }

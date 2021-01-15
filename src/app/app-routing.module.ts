@@ -6,36 +6,40 @@
 // ; Users can filter and search.
 // ;===========================================
 
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./pages/home/home.component";
 import { BeerResultsComponent } from "./pages/beer-results/beer-results.component";
 import { AboutUsComponent } from "./pages/about-us/about-us.component";
 import { ContactUsComponent } from "./pages/contact-us/contact-us.component";
 
-
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: "beerList",
-    component: BeerResultsComponent
+    component: BeerResultsComponent,
   },
   {
     path: "about-us",
-    component: AboutUsComponent
+    component: AboutUsComponent,
   },
   {
     path: "contact-us",
-    component: ContactUsComponent
-  }
+    component: ContactUsComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      relativeLinkResolution: "legacy",
+      scrollPositionRestoration: "enabled",
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

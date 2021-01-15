@@ -20,22 +20,5 @@ export class AboutUsComponent implements OnInit {
 
   constructor(private api: APICallService) {}
 
-  ngOnInit() {
-    // delete later
-    // this.api.callMaxAPI().subscribe((data) => {
-    //   this.beerList = data;
-    //   console.log(data);
-    // });
-  }
-// Delete Later
-  // nextCall(num) {
-  //   this.api.callMaxNext(num).subscribe((data) => {
-  //     this.beerList = data;
-  //   });
-  // }
-
-  // next(){
-  //   let newPgNum = this.pageNum + 1;
-  //   this.nextCall(newPgNum);
-  // }
+  ngOnInit() {}
 }
