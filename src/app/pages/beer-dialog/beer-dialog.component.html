@@ -8,24 +8,24 @@
 ;===========================================
 -->
 
-<div *ngIf="data">
-  <h2 mat-dialog-title>{{ data.name }}</h2>
+<div *ngIf="brew">
+  <h2 mat-dialog-title>{{ brew.name }}</h2>
   <mat-dialog-content>
     <img
-      src="{{ data.image_url }}"
-      alt="Image of {{ data.name }} bottle"
+      src="{{ brew.image_url }}"
+      alt="Image of {{ brew.name }} bottle"
       id="dialogImage"
     />
     <ul>
-      <li>Originated: {{ data.first_brewed }}</li>
-      <li>Alcohol by volume: {{ data.abv }}</li>
-      <li>Bitterness Levels: {{ data.ibu }}</li>
-      <li>Contributed by: {{ data.contributed_by }}</li>
+      <li>Originated: {{ brew.first_brewed }}</li>
+      <li>Alcohol by volume: {{ brew.abv }}</li>
+      <li>Bitterness Levels: {{ brew.ibu }}</li>
+      <li>Contributed by: {{ brew.contributed_by }}</li>
       <li>Pairs well with:</li>
       <ul>
-        <li *ngFor="let food of data.food_pairing">{{ food }}</li>
+        <li *ngFor="let food of brew.food_pairing">{{ food }}</li>
       </ul>
-      <li>Volume: {{ data.volume.value }} {{ data.volume.unit }}</li>
+      <li>Volume: {{ brew.volume.value }} {{ brew.volume.unit }}</li>
     </ul>
 
     <mat-expansion-panel
@@ -35,7 +35,7 @@
       <mat-expansion-panel-header>
         <mat-panel-title> Description </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>{{ data.description }}</p>
+      <p>{{ brew.description }}</p>
     </mat-expansion-panel>
   </mat-dialog-content>
   <mat-dialog-actions>

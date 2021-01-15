@@ -21,17 +21,27 @@ import { BeerResultsComponent } from '../beer-results/beer-results.component';
 export class BeerDialogComponent implements OnInit {
 
   panelOpenState = false;
+  @Input() public brew;
+  // brew: any = {
+  //   name: "",
+  //   image_url: "",
+  //   first_brewed: "",
+  //   abv: "",
+  //   ibu: "",
+  //   contributed_by: "",
+  //   food_pairing: "",
+  //   volume: "",
+  //   description: "",
+  // }
 
   constructor(
     private dialogRef: MatDialogRef<BeerResultsComponent>,
     private router: Router,
-    @Inject(MAT_DIALOG_DATA) public data: object
+    // @Inject(MAT_DIALOG_DATA) public data: object
   ) { }
 
-  //@Input() public beerResult;
-
   ngOnInit() {
-    console.log(this.data)
+    console.log(this.brew)
   }
 
 }
