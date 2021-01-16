@@ -25,6 +25,7 @@ export class BeerResultsComponent implements OnInit {
   selectedFilter: any = {
     alcoholContent: "",
     name: "",
+    bitterness: 300,
   };
 
   constructor(
@@ -35,40 +36,47 @@ export class BeerResultsComponent implements OnInit {
   public applyFilter(event, selection) {
     console.log(event);
 
-    if (event.screenX == 0) {
-      this.selectedFilter.name = "";
-    } else {
-      this.selectedFilter.alcoholContent = "";
-    }
+    console.log(selection);
 
-    if (selection.alcoholContent) {
+    if (event == "slider") {
       this.selectedFilter.name = "";
+      this.selectedFilter.alcoholContent = "";
+      this.api.filterBitterness(selection.bitterness).subscribe((data) => {
+        // Response from API Call
+        console.log("API Lesser Call", data), (this.beerList = data);
+        this.disableNext(data);
+      });
+    } else if (event == "select") {
+      this.selectedFilter.name = "";
+      this.selectedFilter.bitterness = 300;
       if (selection.alcoholContent == "Greater") {
-        this.api.filterGreaterThan().subscribe((data) => {
+        this.api.filterAlcGreater().subscribe((data) => {
           // Response from API Call
           console.log("API Greater Call", data), (this.beerList = data);
           this.disableNext(data);
         });
       } else if (selection.alcoholContent == "Lesser") {
-        this.api.filterLessThan().subscribe((data) => {
+        this.api.filterAlcLess().subscribe((data) => {
           // Response from API Call
           console.log("API Lesser Call", data), (this.beerList = data);
           this.disableNext(data);
         });
       }
       this.pageNumber = 1;
-    } else if (!selection.alcoholContent && !selection.name) {
-      this.api.callAPI().subscribe((data) => {
-        // Response from API Call
-        console.log("API Call", data), (this.beerList = data);
-        this.disableNext(data);
-      });
-      this.pageNumber = 1;
-    } else if (selection.name) {
+    } else if (event == "search") {
+      this.selectedFilter.alcoholContent = "";
+      this.selectedFilter.bitterness = 300;
       this.selectedFilter.alcoholContent = "";
       this.api.searchByName(this.selectedFilter.name).subscribe((data) => {
         // Response from API Call
         console.log("API Search Call", data), (this.beerList = data);
+        this.disableNext(data);
+      });
+      this.pageNumber = 1;
+    } else {
+      this.api.callAPI().subscribe((data) => {
+        // Response from API Call
+        console.log("API Call", data), (this.beerList = data);
         this.disableNext(data);
       });
       this.pageNumber = 1;
@@ -100,32 +108,20 @@ export class BeerResultsComponent implements OnInit {
     const beerDialog = this.dialog.open(BeerDialogComponent, {
       width: "40%",
       height: "90%",
-      // data:
-      // {
-      //   name: beer.name,
-      //   image_url: beer.image_url,
-      //   first_brewed: beer.first_brewed,
-      //   abv: beer.abv,
-      //   ibu: beer.ibu,
-      //   contributed_by: beer.contributed_by,
-      //   food_pairing: beer.food_pairing,
-      //   volume: beer.volume,
-      //   description: beer.description,
-      // }
     });
-    beerDialog.componentInstance.brew = beer
+    beerDialog.componentInstance.brew = beer;
   }
 
   pagination(pgNum) {
     this.pageNumber = pgNum;
     console.log(this.selectedFilter);
     if (this.selectedFilter) {
-      this.api.callNextPage(pgNum, this.selectedFilter).subscribe((data) => {
+      this.api.callNextPage(pgNum, this.selectedFilter, this.selectedFilter.bitterness).subscribe((data) => {
         this.beerList = data;
         this.disableNext(data);
       });
     } else {
-      this.api.callNextPage(pgNum, null).subscribe((data) => {
+      this.api.callNextPage(pgNum, null, null).subscribe((data) => {
         this.beerList = data;
         this.disableNext(data);
       });

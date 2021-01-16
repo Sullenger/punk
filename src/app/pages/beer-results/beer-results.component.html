@@ -27,13 +27,14 @@
     <div class="form" fxLayout="row" fxLayoutAlign="center center">
       <div fxFlex="50" fxFlexOffset="25" class="filter">
         <!-- Search Input -->
+
         <mat-form-field appearance="fill" class="example-form-field filter">
           <mat-label>Search</mat-label>
           <input
             matInput
             type="text"
             [(ngModel)]="selectedFilter.name"
-            (keydown)="applyFilter($event, selectedFilter)"
+            (keydown)="applyFilter('search', selectedFilter)"
           />
           <button
             mat-button
@@ -46,6 +47,14 @@
             <mat-icon>close</mat-icon>
           </button>
         </mat-form-field>
+
+        <div class="bitternessSlider">
+          <label class="form-label" for="customRange1">Bitterness Level</label>
+          <mat-slider thumbLabel
+          [displayWith]="formatLabel" min="1" max="300" step="5" value="300" [(ngModel)]="selectedFilter.bitterness"
+          (click)="applyFilter('slider', selectedFilter)"></mat-slider>
+        </div>
+
         <!-- Alcohol % Select -->
         <mat-form-field appearance="fill" class="example-form-field">
           <mat-label>Alcohol Content</mat-label>
@@ -53,7 +62,7 @@
             color="primary"
             matNativeControl
             [(ngModel)]="selectedFilter.alcoholContent"
-            (click)="applyFilter($event, selectedFilter)"
+            (click)="applyFilter('select', selectedFilter)"
           >
             <option value="" selected></option>
             <option value="Greater">Greater than 5%</option>

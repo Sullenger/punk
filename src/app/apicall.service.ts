@@ -1,4 +1,4 @@
-// ============================================
+0// ============================================
 // ; Title: RW Punk API Technical Challenge
 // ; Author: Jason Sullenger
 // ; Date: 11/01/2020
@@ -19,13 +19,13 @@ export class APICallService {
     return this.http.get("https://api.punkapi.com/v2/beers?per_page=12");
   }
 
-  filterGreaterThan() {
+  filterAlcGreater() {
     return this.http.get(
       "https://api.punkapi.com/v2/beers?abv_gt=5&per_page=12"
     );
   }
 
-  filterLessThan() {
+  filterAlcLess() {
     return this.http.get(
       "https://api.punkapi.com/v2/beers?abv_lt=5&per_page=12"
     );
@@ -39,7 +39,13 @@ export class APICallService {
     );
   }
 
-  callNextPage(pgNum, filter) {
+  filterBitterness(bittNum) {
+    return this.http.get(
+      "https://api.punkapi.com/v2/beers?ibu_lt="+ bittNum +"&per_page=12"
+    );
+  }
+0
+  callNextPage(pgNum, filter, bittNum) {
     if (filter.name) {
       return this.http.get(
         "https://api.punkapi.com/v2/beers?beer_name=" +
@@ -57,6 +63,10 @@ export class APICallService {
           "https://api.punkapi.com/v2/beers?abv_lt=5&per_page=12&page=" + pgNum
         );
       }
+    } else if (filter.bitterness) {
+      return this.http.get(
+        "https://api.punkapi.com/v2/beers?ibu_lt="+ bittNum +"&per_page=12&page=" + pgNum
+      );
     } else {
       return this.http.get(
         "https://api.punkapi.com/v2/beers?page=" + pgNum + "&per_page=12"

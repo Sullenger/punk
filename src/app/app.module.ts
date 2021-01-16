@@ -38,6 +38,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSliderModule } from "@angular/material/slider"
 // import { MatSidenavModule } from '@angular/material/sidenav';
 // import { MatTabsModule } from '@angular/material/tabs';
 // import { MatTableModule } from "@angular/material/table";
@@ -76,6 +77,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatGridListModule,
     MatExpansionModule,
     MatFormFieldModule,
+    MatSliderModule
     // MatSidenavModule
     // MatTabsModule,
     // MatTableModule,
