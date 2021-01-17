@@ -2,57 +2,69 @@
 ============================================
 ; Title: RW Punk API Technical Challenge
 ; Author: Jason Sullenger
-; Date: 11/01/2020
+; Date: 11/01/2021
 ; Description: General Website. Calls Punk API.
 ; Users can filter and search.
 ;===========================================
 -->
 
-
-<!-- fxLayoutAlign="end center" ???  -->
-<div class="navMenu">
-
-  <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-
+<div>
   <header>
     <mat-toolbar class="menu" role="header" color="warn">
-      <mat-toolbar-row>
+
+      <div class="logoWide">
         <img
-          src="../../assets/images/sully-Logo-Wide-Inverted.png"
-          alt="Alternate logo for Sully Selections"
-          class="logoWide"
-          (click)="navigateHome()"
-        />
-        <div class="navigation">
+        src="../../assets/images/sully-Logo-Wide-Inverted.png"
+        alt="Alternate logo for Sully Selections"
+        (click)="navigateHome()"
+      />
+      </div>
+      <div *ngIf="mobile" class="mobileNav">
+        <button mat-icon-button [matMenuTriggerFor]="belowMenu" aria-label="Example icon-button with a menu">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <mat-menu #belowMenu="matMenu">
           <button mat-button (click)="navigateHome()">
             <mat-icon id="iconMargin">home</mat-icon>
             <span>Home</span>
           </button>
-
+          <br>
           <button mat-button (click)="navigateBeerList()">
             <mat-icon id="iconMargin">local_drink</mat-icon>
             <span>Available Beer</span>
           </button>
-
+          <br>
           <button mat-button (click)="navigateAbout()">
             <mat-icon id="iconMargin">business</mat-icon>
             <span>About Us</span>
           </button>
-
+          <br>
           <button mat-button (click)="navigateContact()">
             <mat-icon id="iconMargin">email</mat-icon>
             <span>Contact Us</span>
           </button>
+        </mat-menu>
+      </div>
+        <div *ngIf="!mobile">
+          <div class="navigation">
+            <button mat-button (click)="navigateHome()">
+              <mat-icon id="iconMargin">home</mat-icon>
+              <span>Home</span>
+            </button>
+            <button mat-button (click)="navigateBeerList()">
+              <mat-icon id="iconMargin">local_drink</mat-icon>
+              <span>Available Beer</span>
+            </button>
+            <button mat-button (click)="navigateAbout()">
+              <mat-icon id="iconMargin">business</mat-icon>
+              <span>About Us</span>
+            </button>
+            <button mat-button (click)="navigateContact()">
+              <mat-icon id="iconMargin">email</mat-icon>
+              <span>Contact Us</span>
+            </button>
+          </div>
         </div>
-      </mat-toolbar-row>
     </mat-toolbar>
   </header>
 </div>

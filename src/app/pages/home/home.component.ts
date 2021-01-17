@@ -1,7 +1,7 @@
 // ============================================
 // ; Title: RW Punk API Technical Challenge
 // ; Author: Jason Sullenger
-// ; Date: 11/01/2020
+// ; Date: 11/01/2021
 // ; Description: General Website. Calls Punk API.
 // ; Users can filter and search.
 // ;===========================================
@@ -34,11 +34,11 @@ export class HomeComponent implements OnInit {
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     const beerDialog = this.dialog.open(AgeDialogComponent, {
-      width: "30%",
-      height: "60%",
+      // width: "30%",
+      // height: "60%",
       disableClose: true,
       panelClass: "custom-Age-Dialog",
-      backdropClass: "backdropBackground",
+      backdropClass: "AgeDialogStyling",
     });
   }
 

@@ -1,19 +1,79 @@
-.contactUs {
-  margin: 150px auto 24% auto;
-  width: 40%;
-  height: 300px;
+@media screen and (min-width: 1025px) {
+  .contactUs {
+    margin: 150px auto 22% auto;
+    width: 30%;
+  }
+  .contactRow {
+    margin-left: 50px;
+  }
+  .contactPhone {
+    width: 100%;
+    margin: 10px;
+  }
+  .contactEmail {
+    width: 100%;
+    margin: 10px;
+  }
+  .contactAddress {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .contactUs {
+    margin: 150px auto 52% auto;
+    width: 85%;
+  }
+  .contactCard {
+    width: 100%;
+  }
+  .contactPhone {
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .contactEmail {
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .contactAddress {
+    width: 100%;
+    margin: 20px 0px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .contactUs {
+    margin: 150px auto 52% auto;
+    width: 50%;
+  }
+  .contactCard {
+    width: 100%;
+  }
+  .contactPhone {
+    width: 100%;
+    margin: 20px;
+  }
+  .contactEmail {
+    width: 100%;
+    margin: 20px;
+  }
+  .contactAddress {
+    width: 100%;
+    margin: 20px;
+  }
+}
+/* Main Styling */
+.contactRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .contactCard {
   background-color: lightgray;
-}
-
-.cardContent {
-  margin: 25px 25px;
-}
-
-.cardContent > div {
-  margin: 25px 50px;
 }
 
 a {

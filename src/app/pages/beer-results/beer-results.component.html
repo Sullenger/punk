@@ -2,7 +2,7 @@
 ============================================
 ; Title: RW Punk API Technical Challenge
 ; Author: Jason Sullenger
-; Date: 11/01/2020
+; Date: 11/01/2021
 ; Description: General Website. Calls Punk API.
 ; Users can filter and search.
 ;===========================================
@@ -36,7 +36,7 @@
       <!-- Bitterness Slider -->
       <div class="bitterness-Slider">
         <label class="form-label" for="customRange1">Bitterness Level</label>
-        <br>
+        <br />
         <mat-slider
           thumbLabel
           [displayWith]="formatLabel"
@@ -66,38 +66,45 @@
     </mat-drawer>
 
     <div class="filter-Sidenav-Button">
-      <button type="button" mat-raised-button color="primary" (click)="drawer.toggle()">
+      <button
+        type="button"
+        mat-raised-button
+        color="primary"
+        (click)="drawer.toggle()"
+      >
         Filters
       </button>
     </div>
 
     <!-- Beer List -->
-    <mat-grid-list cols="4" gutterSize="1px" rowHeight="1:1.25">
-      <div *ngFor="let beer of beerList">
-        <a class="" (click)="openDialog(beer)">
-          <mat-grid-tile>
-            <div class="beer-card">
-              <div class="textCenter justify">
-                <img
-                  mat-card-image
-                  src="{{ beer.image_url }}"
-                  alt="Image of {{ beer.name }} bottle"
-                  class="beerImage"
-                />
+
+    <div class="beerList">
+      <div class="beerRow">
+        <div *ngFor="let beer of beerList">
+          <div class="beerTile">
+            <a class="" (click)="openDialog(beer)">
+              <div class="beerCard">
+                <div class="">
+                  <img
+                    mat-card-image
+                    src="{{ beer.image_url }}"
+                    alt="Image of {{ beer.name }} bottle"
+                    class="beerImage"
+                  />
+                </div>
+                <div class="beerContent textCenter">
+                  <h6>{{ beer.name }}</h6>
+                  <p>
+                    {{ beer.tagline }}
+                  </p>
+                  <hr />
+                </div>
               </div>
-              <div class="beerContent textCenter">
-                <h5>{{ beer.name }}</h5>
-                <p>
-                  {{ beer.tagline }}
-                </p>
-                <hr />
-              </div>
-            </div>
-          </mat-grid-tile>
-        </a>
+            </a>
+          </div>
+        </div>
       </div>
-    </mat-grid-list>
-    <!-- End beer list -->
+    </div>
 
     <!-- Pagination -->
     <div class="pagDiv">

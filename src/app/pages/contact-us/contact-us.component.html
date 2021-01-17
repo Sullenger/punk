@@ -2,7 +2,7 @@
 ============================================
 ; Title: RW Punk API Technical Challenge
 ; Author: Jason Sullenger
-; Date: 11/01/2020
+; Date: 11/01/2021
 ; Description: General Website. Calls Punk API.
 ; Users can filter and search.
 ;===========================================
@@ -10,31 +10,32 @@
 
 <div class="contactUs">
   <mat-card class="contactCard">
-    <mat-card-header id="justify">
+    <mat-card-header>
       <mat-card-title>Contact Us</mat-card-title>
     </mat-card-header>
-    <hr />
-    <mat-card-content class="cardContent">
-      <div class="phone">
-        <i class="fas fa-phone-alt fa-2x"></i>
-        <a href="#"><h6>555-555-5555</h6></a>
-      </div>
 
-      <div class="email">
-        <i class="far fa-envelope fa-2x"></i>
-        <a href="#"><h6>fakeEmail@fakeDomain.com</h6></a>
-      </div>
+    <mat-card-content class="contactContent">
+      <div class="contactRow">
+        <div class="contactPhone">
+          <i class="fas fa-phone-alt fa-2x"></i>
 
-      <div class="email">
-        <i class="far fa-address-card fa-2x"></i>
-        <h6>
-          <strong>Sully Selections</strong>
-          <br />
-          123 Fake Address St
-          <br />
-          Anytown, ID 12345
-          <br />
-        </h6>
+          <a href="#"><h6>555-555-5555</h6></a>
+        </div>
+        <div class="contactEmail">
+          <i class="far fa-envelope fa-2x"></i>
+          <a href="#"><h6>fakeEmail@fakeDomain.com</h6></a>
+        </div>
+        <div class="contactAddress">
+          <i class="far fa-address-card fa-2x"></i>
+          <h6>
+            <strong>Sully Selections</strong>
+            <br />
+            123 Fake Address St
+            <br />
+            Anytown, ID 12345
+            <br />
+          </h6>
+        </div>
       </div>
     </mat-card-content>
   </mat-card>

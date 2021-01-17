@@ -2,41 +2,44 @@
 ============================================
 ; Title: RW Punk API Technical Challenge
 ; Author: Jason Sullenger
-; Date: 11/01/2020
+; Date: 11/01/2021
 ; Description: General Website. Calls Punk API.
 ; Users can filter and search.
 ;===========================================
 -->
 
-<div *ngIf="brew">
+<div class="beerDialog" *ngIf="brew">
   <h2 mat-dialog-title>{{ brew.name }}</h2>
   <mat-dialog-content>
-    <img
-      src="{{ brew.image_url }}"
-      alt="Image of {{ brew.name }} bottle"
-      id="dialogImage"
-    />
-    <ul>
-      <li>Originated: {{ brew.first_brewed }}</li>
-      <li>Alcohol by volume: {{ brew.abv }}</li>
-      <li>Bitterness Levels: {{ brew.ibu }}</li>
-      <li>Contributed by: {{ brew.contributed_by }}</li>
-      <li>Pairs well with:</li>
-      <ul>
-        <li *ngFor="let food of brew.food_pairing">{{ food }}</li>
-      </ul>
-      <li>Volume: {{ brew.volume.value }} {{ brew.volume.unit }}</li>
-    </ul>
-
-    <mat-expansion-panel
-      (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false"
-    >
-      <mat-expansion-panel-header>
-        <mat-panel-title> Description </mat-panel-title>
-      </mat-expansion-panel-header>
+    <div class="dialogRow">
+      <div class="dialogImage">
+        <img
+          class="beerImage"
+          src="{{ brew.image_url }}"
+          alt="Image of {{ brew.name }} bottle"
+        />
+      </div>
+      <div class="dialogText">
+        <ul>
+          <li><strong>Originated:</strong> {{ brew.first_brewed }}</li>
+          <li><strong>Alcohol by volume:</strong> {{ brew.abv }}</li>
+          <li><strong>Bitterness Levels:</strong> {{ brew.ibu }}</li>
+          <li><strong>Contributed by:</strong> {{ brew.contributed_by }}</li>
+          <li><strong>Pairs well with:</strong></li>
+          <ul>
+            <li *ngFor="let food of brew.food_pairing">{{ food }}</li>
+          </ul>
+          <li>
+            <strong>Volume:</strong> {{ brew.volume.value }}
+            {{ brew.volume.unit }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dialogDescription">
+      <h5>Description:</h5>
       <p>{{ brew.description }}</p>
-    </mat-expansion-panel>
+    </div>
   </mat-dialog-content>
   <mat-dialog-actions>
     <button mat-raised-button mat-dialog-close color="accent">Close</button>

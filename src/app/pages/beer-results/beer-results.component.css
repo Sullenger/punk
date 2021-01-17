@@ -1,46 +1,99 @@
-.beerPage {
-  margin: 100px auto 0px auto;
-  max-width: 100%;
+@media screen and (min-width: 1025px) {
+  .beerPage {
+    margin-top: 100px;
+  }
+  .filter-Section {
+    margin-left: 15px;
+  }
+  .filter-Sidenav-Button {
+    margin-top: 15px;
+  }
+  .beerList {
+    margin: 0px auto 0px auto;
+    width: 100%;
+  }
+  .beerRow {
+    margin: 0px auto 0px auto;
+    width: 100%;
+  }
+  .beerTile {
+    margin: 50px auto;
+  }
+  .beerCard {
+    text-align: center;
+    margin: 50px auto;
+    width: 300px;
+  }
+  .beerImage {
+    height: 300px;
+  }
+}
+/* Phone */
+@media screen and (max-width: 600px) {
+  .beerPage {
+    margin-top: 75px;
+  }
+  .filter-Section {
+    margin-left: 5px;
+  }
+  .filter-Sidenav-Button {
+    margin-top: 15px;
+  }
+  .beerTile {
+    margin: 10px auto;
+  }
+  .beerCard {
+    text-align: center;
+    margin: 15px auto;
+    width: 300px;
+  }
+  .beerImage {
+    height: 300px;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 1025px) and (min-width: 601px) {
+  .beerPage {
+    margin-top: 100px;
+  }
+  .filter-Section {
+    margin-left: 5px;
+  }
+  .filter-Sidenav-Button {
+    margin-top: 5px;
+  }
+  .beerCard {
+    text-align: center;
+    margin: 20px auto;
+    width: 260px;
+  }
+  .beerImage {
+    height: 250px;
+  }
 }
 
-.textCenter {
-  text-align: center;
+/* Main Styling */
+.beerRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-/* Filter Section */
-.filter-Section{
-  height: 100%;
-  font-size: 15px;
+.beerPage,
+.beerList,
+.filter-Section,
+.filter-Sidenav {
+  background-color: lightgray;
 }
 
-.filter-Sidenav-Button{
-  margin: 10px
-}
-
-.filter-Sidenav{
-  text-align: left;
-  padding: 10px;
-  position: fixed;
-  margin-top: 115px;
-}
-
-mat-slider{
-  width: 90%;
-}
-
-.search-form-field{
-  margin-right: 15px;
-}
-
-/* Beer Card */
-.beer-card > div > img {
-  height: 300px;
-}
-
-.beer-card:hover {
+.beerCard:hover {
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
   -ms-transform: scale(1.01);
+}
+
+mat-slider {
+  width: 90%;
 }
 
 /* Pagination */

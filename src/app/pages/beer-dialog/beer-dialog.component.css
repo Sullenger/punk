@@ -1,4 +1,57 @@
-img{
-  height: 15em;
-  display: inline-block;
+@media screen and (min-width: 1025px) {
+  img {
+    height: 250px;
+  }
+  .beerDialog {
+    width: 600px;
+  }
+  .dialogImage {
+    width: 30%;
+    height: 100px;
+  }
+  .dialogText {
+    width: 60%;
+  }
+  .dialogDescription {
+    margin: 25px;
+  }
+}
+/* Phone */
+@media screen and (max-width: 600px) {
+  .beerDialog {
+    width: 95%;
+    margin: 0px auto;
+  }
+  .beerImage {
+    height: 300px;
+    margin: 0px auto;
+  }
+  .dialogText {
+    width: 100%;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 1025px) and (min-width: 601px) {
+  img {
+    height: 300px;
+  }
+  .beerDialog {
+    width: 600px;
+  }
+  .dialogImage {
+    width: 30%;
+    height: 100px;
+  }
+  .dialogText {
+    width: 60%;
+  }
+  .dialogDescription {
+    margin: 50px 5px 25px 5px;
+    padding-right: 25px;
+  }
+}
+.dialogRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }

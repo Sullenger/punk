@@ -1,33 +1,74 @@
+@media screen and (min-width: 1025px) {
+  .menu {
+    height: 100px;
+    width: 100%;
+  }
+  .logoWide {
+    width: 225px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .navigation {
+    width: 60%;
+    margin-left: 100%;
+  }
+
+  .logoWide:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+/* Phone */
+@media screen and (max-width: 600px) {
+  .menu {
+    height: 12%;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logoWide {
+    width: 35%;
+    margin: auto 20px;
+  }
+  .mobileNav {
+    width: 5%;
+    margin: auto 20px;
+  }
+  .logoWide > img {
+    width: 100%;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 1025px) and (min-width: 601px) {
+  .menu {
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logoWide {
+    width: 35%;
+    margin: auto 2%;
+  }
+  .mobileNav {
+    width: 5%;
+    margin: auto 20px;
+  }
+  .logoWide > img {
+    width: 65%;
+  }
+}
+
 .menu {
-  height: 100px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu {
   position: fixed;
   top: 0;
   z-index: 1000;
   color: white;
 }
-
-.logoWide {
-  width: 225px;
-  margin-top: 25px;
-  border-radius: 10px;
-}
-
-.logoWide:hover {
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-}
-
-.navigation {
-  margin-top: 75px;
-  margin-left: 30%;
-}
-
-#iconMargin {
-  margin-right: 7px;
-}
-
-

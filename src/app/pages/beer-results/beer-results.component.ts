@@ -1,7 +1,7 @@
 // ============================================
 // ; Title: RW Punk API Technical Challenge
 // ; Author: Jason Sullenger
-// ; Date: 11/01/2020
+// ; Date: 11/01/2021
 // ; Description: General Website. Calls Punk API.
 // ; Users can filter and search.
 // ;===========================================
@@ -106,8 +106,6 @@ export class BeerResultsComponent implements OnInit {
   openDialog(beer) {
     const dialogConfig = new MatDialogConfig();
     const beerDialog = this.dialog.open(BeerDialogComponent, {
-      width: "40%",
-      height: "90%",
     });
     beerDialog.componentInstance.brew = beer;
   }
@@ -136,11 +134,18 @@ export class BeerResultsComponent implements OnInit {
   nextPage() {
     let newPgNum = this.pageNumber + 1;
     this.pagination(newPgNum);
+    this.scrollTop()
   }
 
   previousPage() {
     let newPgNum = this.pageNumber - 1;
     this.pagination(newPgNum);
+    this.scrollTop()
+  }
+
+  scrollTop(){
+    console.log("ScrollTop Called")
+    window.scrollTo(0, 0);
   }
 
   ngOnInit() {

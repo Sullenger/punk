@@ -2056,12 +2056,25 @@ body {
   height: 100%;
 } */
 
+@media screen and (min-width: 1000px) {
+}
+
+/* Phone */
+
+@media screen and (max-width: 600px) {
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1025px) {
+}
+
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.backdropBackground {
+.AgeDialogStyling {
   background-color: black;
   opacity: 0.9 !important;
 }

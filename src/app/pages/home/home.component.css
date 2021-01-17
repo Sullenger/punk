@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1026px) {
   /* First Row */
   .main {
     padding-left: 75px;
@@ -65,7 +65,7 @@
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1025px) and (min-width: 601px) {
   /* Tablet First Row */
   .aboutUs {
     width: 100%;
@@ -76,7 +76,8 @@
   }
   /* Tablet Second Row */
   .secondRow > .image {
-    width: 50%;
+    width: 35%;
+    margin: 25px;
   }
   .textBox {
     width: 100%;
