@@ -1,37 +1,49 @@
 .beerPage {
-  margin-top: 100px;
-}
-.beerImage {
-  width: 30%;
+  margin: 100px auto 0px auto;
+  max-width: 100%;
 }
 
 .textCenter {
   text-align: center;
 }
 
-.filter{
-  margin-right: 15px;
-}
-
-
-.form {
+/* Filter Section */
+.filter-Section{
+  height: 100%;
   font-size: 15px;
 }
 
-.filterHeader {
-  margin-top: 5px;
-  margin-left: 50px;
+.filter-Sidenav-Button{
+  margin: 10px
 }
 
-.beerTile > div > img {
+.filter-Sidenav{
+  text-align: left;
+  padding: 10px;
+  position: fixed;
+  margin-top: 115px;
+}
+
+mat-slider{
+  width: 90%;
+}
+
+.search-form-field{
+  margin-right: 15px;
+}
+
+/* Beer Card */
+.beer-card > div > img {
   height: 300px;
 }
 
 .beer-card:hover {
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
 }
+
+/* Pagination */
 .pagDiv {
   height: 100px;
   background-color: #0097a7;

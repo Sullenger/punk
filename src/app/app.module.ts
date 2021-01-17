@@ -12,7 +12,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { CookieService } from "ngx-cookie-service";
 // Components
@@ -39,7 +39,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSliderModule } from "@angular/material/slider"
-// import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 // import { MatTabsModule } from '@angular/material/tabs';
 // import { MatTableModule } from "@angular/material/table";
 
@@ -64,6 +64,7 @@ import { MatSliderModule } from "@angular/material/slider"
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     // Start Angular Materials
     MatDialogModule,
@@ -77,8 +78,8 @@ import { MatSliderModule } from "@angular/material/slider"
     MatGridListModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatSliderModule
-    // MatSidenavModule
+    MatSliderModule,
+    MatSidenavModule
     // MatTabsModule,
     // MatTableModule,
     // End Angular Materials

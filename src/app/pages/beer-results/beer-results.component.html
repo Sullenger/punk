@@ -8,115 +8,113 @@
 ;===========================================
 -->
 
-<div class="beerPage" id="textCenter">
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <div class="example-sidenav-content, filterHeader">
-          <h6
-            (opened)="panelOpenState = true"
-            (closed)="panelOpenState = false"
-          >
-            Filters
-          </h6>
-        </div>
-      </mat-panel-title>
-    </mat-expansion-panel-header>
+<div class="beerPage">
+  <!-- Filter -->
+  <mat-drawer-container class="filter-Section">
+    <mat-drawer #drawer class="filter-Sidenav" mode="side">
+      <!-- Search by name -->
+      <mat-form-field class="search-form-field">
+        <mat-label>Search by name</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="selectedFilter.name"
+          (keydown)="applyFilter('search', selectedFilter)"
+        />
+        <button
+          mat-button
+          *ngIf="selectedFilter.name"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearedSearch()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
 
-    <!-- Filter -->
-    <div class="form" fxLayout="row" fxLayoutAlign="center center">
-      <div fxFlex="50" fxFlexOffset="25" class="filter">
-        <!-- Search Input -->
-
-        <mat-form-field appearance="fill" class="example-form-field filter">
-          <mat-label>Search</mat-label>
-          <input
-            matInput
-            type="text"
-            [(ngModel)]="selectedFilter.name"
-            (keydown)="applyFilter('search', selectedFilter)"
-          />
-          <button
-            mat-button
-            *ngIf="selectedFilter.name"
-            matSuffix
-            mat-icon-button
-            aria-label="Clear"
-            (click)="clearedSearch()"
-          >
-            <mat-icon>close</mat-icon>
-          </button>
-        </mat-form-field>
-
-        <div class="bitternessSlider">
-          <label class="form-label" for="customRange1">Bitterness Level</label>
-          <mat-slider thumbLabel
-          [displayWith]="formatLabel" min="1" max="300" step="5" value="300" [(ngModel)]="selectedFilter.bitterness"
-          (click)="applyFilter('slider', selectedFilter)"></mat-slider>
-        </div>
-
-        <!-- Alcohol % Select -->
-        <mat-form-field appearance="fill" class="example-form-field">
-          <mat-label>Alcohol Content</mat-label>
-          <select
-            color="primary"
-            matNativeControl
-            [(ngModel)]="selectedFilter.alcoholContent"
-            (click)="applyFilter('select', selectedFilter)"
-          >
-            <option value="" selected></option>
-            <option value="Greater">Greater than 5%</option>
-            <option value="Lesser">Less than 5%</option>
-          </select>
-        </mat-form-field>
+      <!-- Bitterness Slider -->
+      <div class="bitterness-Slider">
+        <label class="form-label" for="customRange1">Bitterness Level</label>
+        <br>
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          min="1"
+          max="300"
+          step="5"
+          values="1,300"
+          [(ngModel)]="selectedFilter.bitterness"
+          (click)="applyFilter('slider', selectedFilter)"
+        ></mat-slider>
       </div>
-    </div>
-  </mat-expansion-panel>
-  <!-- End Filter -->
 
-  <!-- Beer List -->
-  <mat-grid-list cols="4" rowHeight="1:1.25">
-    <div class="beer-card" *ngFor="let beer of beerList">
-      <a (click)="openDialog(beer)">
-        <mat-grid-tile>
-          <div class="beerTile">
-            <div class="textCenter justify">
-              <img
-                mat-card-image
-                src="{{ beer.image_url }}"
-                alt="Image of {{ beer.name }} bottle"
-                class="beerImage"
-              />
-            </div>
-            <div class="beerContent textCenter">
-              <h5>{{ beer.name }}</h5>
-              <p>
-                {{ beer.tagline }}
-              </p>
-              <hr />
-            </div>
-          </div>
-        </mat-grid-tile>
-      </a>
-    </div>
-  </mat-grid-list>
-  <!-- End beer list -->
+      <!-- Alcohol Content -->
+      <mat-form-field appearance="fill" class="Alcohol-form-field">
+        <mat-label>Alcohol Content</mat-label>
+        <select
+          color="primary"
+          matNativeControl
+          [(ngModel)]="selectedFilter.alcoholContent"
+          (click)="applyFilter('select', selectedFilter)"
+        >
+          <option value="" selected></option>
+          <option value="Greater">Greater than 5%</option>
+          <option value="Lesser">Less than 5%</option>
+        </select>
+      </mat-form-field>
+    </mat-drawer>
 
-  <!-- Pagination -->
-  <div class="pagDiv">
-    <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center">
-        <li class="page-item" [class.disabled]="prevDisable">
-          <a class="page-link" (click)="previousPage()">Previous</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link">Page {{ pageNumber }}</a>
-        </li>
-        <li class="page-item" [class.disabled]="nextDisable">
-          <a class="page-link" (click)="nextPage()">Next</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- End Pagination -->
+    <div class="filter-Sidenav-Button">
+      <button type="button" mat-raised-button color="primary" (click)="drawer.toggle()">
+        Filters
+      </button>
+    </div>
+
+    <!-- Beer List -->
+    <mat-grid-list cols="4" gutterSize="1px" rowHeight="1:1.25">
+      <div *ngFor="let beer of beerList">
+        <a class="" (click)="openDialog(beer)">
+          <mat-grid-tile>
+            <div class="beer-card">
+              <div class="textCenter justify">
+                <img
+                  mat-card-image
+                  src="{{ beer.image_url }}"
+                  alt="Image of {{ beer.name }} bottle"
+                  class="beerImage"
+                />
+              </div>
+              <div class="beerContent textCenter">
+                <h5>{{ beer.name }}</h5>
+                <p>
+                  {{ beer.tagline }}
+                </p>
+                <hr />
+              </div>
+            </div>
+          </mat-grid-tile>
+        </a>
+      </div>
+    </mat-grid-list>
+    <!-- End beer list -->
+
+    <!-- Pagination -->
+    <div class="pagDiv">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item" [class.disabled]="prevDisable">
+            <a class="page-link" (click)="previousPage()">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link">Page {{ pageNumber }}</a>
+          </li>
+          <li class="page-item" [class.disabled]="nextDisable">
+            <a class="page-link" (click)="nextPage()">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End Pagination -->
+  </mat-drawer-container>
 </div>
