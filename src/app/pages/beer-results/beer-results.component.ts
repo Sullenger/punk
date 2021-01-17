@@ -105,8 +105,7 @@ export class BeerResultsComponent implements OnInit {
 
   openDialog(beer) {
     const dialogConfig = new MatDialogConfig();
-    const beerDialog = this.dialog.open(BeerDialogComponent, {
-    });
+    const beerDialog = this.dialog.open(BeerDialogComponent, {});
     beerDialog.componentInstance.brew = beer;
   }
 
@@ -114,10 +113,16 @@ export class BeerResultsComponent implements OnInit {
     this.pageNumber = pgNum;
     console.log(this.selectedFilter);
     if (this.selectedFilter) {
-      this.api.callNextPage(pgNum, this.selectedFilter, this.selectedFilter.bitterness).subscribe((data) => {
-        this.beerList = data;
-        this.disableNext(data);
-      });
+      this.api
+        .callNextPage(
+          pgNum,
+          this.selectedFilter,
+          this.selectedFilter.bitterness
+        )
+        .subscribe((data) => {
+          this.beerList = data;
+          this.disableNext(data);
+        });
     } else {
       this.api.callNextPage(pgNum, null, null).subscribe((data) => {
         this.beerList = data;
@@ -134,17 +139,17 @@ export class BeerResultsComponent implements OnInit {
   nextPage() {
     let newPgNum = this.pageNumber + 1;
     this.pagination(newPgNum);
-    this.scrollTop()
+    this.scrollTop();
   }
 
   previousPage() {
     let newPgNum = this.pageNumber - 1;
     this.pagination(newPgNum);
-    this.scrollTop()
+    this.scrollTop();
   }
 
-  scrollTop(){
-    console.log("ScrollTop Called")
+  scrollTop() {
+    console.log("ScrollTop Called");
     window.scrollTo(0, 0);
   }
 

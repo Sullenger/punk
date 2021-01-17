@@ -6,11 +6,9 @@
 // ; Users can filter and search.
 // ;===========================================
 
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { MatExpansionModule } from "@angular/material/expansion";
 import { Router } from "@angular/router";
-//import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import { BeerResultsComponent } from '../beer-results/beer-results.component';
 
 @Component({
@@ -22,22 +20,10 @@ export class BeerDialogComponent implements OnInit {
 
   panelOpenState = false;
   @Input() public brew;
-  // brew: any = {
-  //   name: "",
-  //   image_url: "",
-  //   first_brewed: "",
-  //   abv: "",
-  //   ibu: "",
-  //   contributed_by: "",
-  //   food_pairing: "",
-  //   volume: "",
-  //   description: "",
-  // }
 
   constructor(
     private dialogRef: MatDialogRef<BeerResultsComponent>,
     private router: Router,
-    // @Inject(MAT_DIALOG_DATA) public data: object
   ) { }
 
   ngOnInit() {

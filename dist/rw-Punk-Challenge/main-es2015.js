@@ -158,7 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("@media screen and (min-width: 1025px) {\r\n  .aboutUs {\r\n    margin: 150px auto 0px auto;\r\n    width: 80%;\r\n  }\r\n  .aboutImg{\r\n    width: 35%;\r\n  }\r\n  .aboutText{\r\n    width: 55%;\r\n  }\r\n}\r\n/* Phone */\r\n@media screen and (max-width: 600px) {\r\n  .aboutUs {\r\n    margin: 125px auto 150px auto;\r\n    width: 100%;\r\n  }\r\n  .aboutImg{\r\n    width: 75%;\r\n  }\r\n  .aboutText{\r\n    margin-top: 25px;\r\n    width: 100%;\r\n  }\r\n}\r\n/* Tablet */\r\n@media screen and (max-width: 1025px) and (min-width: 601px) {\r\n  .aboutUs {\r\n    margin: 150px auto 150px auto;\r\n    width: 100%;\r\n  }\r\n  .aboutImg{\r\n    width: 45%;\r\n  }\r\n  .aboutText{\r\n    width: 100%;\r\n  }\r\n}\r\n/* Main Styling */\r\n.aboutRow{\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n  justify-content: space-around;\r\n}\r\n.aboutCard {\r\n  background-color: lightgray;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFib3V0LXVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtJQUNFLDJCQUEyQjtJQUMzQixVQUFVO0VBQ1o7RUFDQTtJQUNFLFVBQVU7RUFDWjtFQUNBO0lBQ0UsVUFBVTtFQUNaO0FBQ0Y7QUFDQSxVQUFVO0FBQ1Y7RUFDRTtJQUNFLDZCQUE2QjtJQUM3QixXQUFXO0VBQ2I7RUFDQTtJQUNFLFVBQVU7RUFDWjtFQUNBO0lBQ0UsZ0JBQWdCO0lBQ2hCLFdBQVc7RUFDYjtBQUNGO0FBQ0EsV0FBVztBQUNYO0VBQ0U7SUFDRSw2QkFBNkI7SUFDN0IsV0FBVztFQUNiO0VBQ0E7SUFDRSxVQUFVO0VBQ1o7RUFDQTtJQUNFLFdBQVc7RUFDYjtBQUNGO0FBRUEsaUJBQWlCO0FBQ2pCO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQiw2QkFBNkI7QUFDL0I7QUFFQTtFQUNFLDJCQUEyQjtBQUM3QiIsImZpbGUiOiJhYm91dC11cy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTAyNXB4KSB7XHJcbiAgLmFib3V0VXMge1xyXG4gICAgbWFyZ2luOiAxNTBweCBhdXRvIDBweCBhdXRvO1xyXG4gICAgd2lkdGg6IDgwJTtcclxuICB9XHJcbiAgLmFib3V0SW1ne1xyXG4gICAgd2lkdGg6IDM1JTtcclxuICB9XHJcbiAgLmFib3V0VGV4dHtcclxuICAgIHdpZHRoOiA1NSU7XHJcbiAgfVxyXG59XHJcbi8qIFBob25lICovXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgLmFib3V0VXMge1xyXG4gICAgbWFyZ2luOiAxMjVweCBhdXRvIDE1MHB4IGF1dG87XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgLmFib3V0SW1ne1xyXG4gICAgd2lkdGg6IDc1JTtcclxuICB9XHJcbiAgLmFib3V0VGV4dHtcclxuICAgIG1hcmdpbi10b3A6IDI1cHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbn1cclxuLyogVGFibGV0ICovXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwMjVweCkgYW5kIChtaW4td2lkdGg6IDYwMXB4KSB7XHJcbiAgLmFib3V0VXMge1xyXG4gICAgbWFyZ2luOiAxNTBweCBhdXRvIDE1MHB4IGF1dG87XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgLmFib3V0SW1ne1xyXG4gICAgd2lkdGg6IDQ1JTtcclxuICB9XHJcbiAgLmFib3V0VGV4dHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxufVxyXG5cclxuLyogTWFpbiBTdHlsaW5nICovXHJcbi5hYm91dFJvd3tcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZmxvdzogcm93IHdyYXA7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XHJcbn1cclxuXHJcbi5hYm91dENhcmQge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JheTtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media screen and (min-width: 1025px) {\r\n  .aboutUs {\r\n    margin: 150px auto 0px auto;\r\n    width: 80%;\r\n  }\r\n  .aboutImg {\r\n    width: 35%;\r\n  }\r\n  .aboutText {\r\n    width: 55%;\r\n  }\r\n}\r\n/* Phone */\r\n@media screen and (max-width: 600px) {\r\n  .aboutUs {\r\n    margin: 125px auto 150px auto;\r\n    width: 100%;\r\n  }\r\n  .aboutImg {\r\n    width: 75%;\r\n  }\r\n  .aboutText {\r\n    margin-top: 25px;\r\n    width: 100%;\r\n  }\r\n}\r\n/* Tablet */\r\n@media screen and (max-width: 1025px) and (min-width: 601px) {\r\n  .aboutUs {\r\n    margin: 150px auto 150px auto;\r\n    width: 100%;\r\n  }\r\n  .aboutImg {\r\n    width: 45%;\r\n  }\r\n  .aboutText {\r\n    width: 100%;\r\n  }\r\n}\r\n/* Main Styling */\r\n.aboutRow {\r\n  display: flex;\r\n  flex-flow: row wrap;\r\n  justify-content: space-around;\r\n}\r\n.aboutCard {\r\n  background-color: lightgray;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFib3V0LXVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtJQUNFLDJCQUEyQjtJQUMzQixVQUFVO0VBQ1o7RUFDQTtJQUNFLFVBQVU7RUFDWjtFQUNBO0lBQ0UsVUFBVTtFQUNaO0FBQ0Y7QUFDQSxVQUFVO0FBQ1Y7RUFDRTtJQUNFLDZCQUE2QjtJQUM3QixXQUFXO0VBQ2I7RUFDQTtJQUNFLFVBQVU7RUFDWjtFQUNBO0lBQ0UsZ0JBQWdCO0lBQ2hCLFdBQVc7RUFDYjtBQUNGO0FBQ0EsV0FBVztBQUNYO0VBQ0U7SUFDRSw2QkFBNkI7SUFDN0IsV0FBVztFQUNiO0VBQ0E7SUFDRSxVQUFVO0VBQ1o7RUFDQTtJQUNFLFdBQVc7RUFDYjtBQUNGO0FBRUEsaUJBQWlCO0FBQ2pCO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQiw2QkFBNkI7QUFDL0I7QUFFQTtFQUNFLDJCQUEyQjtBQUM3QiIsImZpbGUiOiJhYm91dC11cy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIHNjcmVlbiBhbmQgKG1pbi13aWR0aDogMTAyNXB4KSB7XHJcbiAgLmFib3V0VXMge1xyXG4gICAgbWFyZ2luOiAxNTBweCBhdXRvIDBweCBhdXRvO1xyXG4gICAgd2lkdGg6IDgwJTtcclxuICB9XHJcbiAgLmFib3V0SW1nIHtcclxuICAgIHdpZHRoOiAzNSU7XHJcbiAgfVxyXG4gIC5hYm91dFRleHQge1xyXG4gICAgd2lkdGg6IDU1JTtcclxuICB9XHJcbn1cclxuLyogUGhvbmUgKi9cclxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICAuYWJvdXRVcyB7XHJcbiAgICBtYXJnaW46IDEyNXB4IGF1dG8gMTUwcHggYXV0bztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxuICAuYWJvdXRJbWcge1xyXG4gICAgd2lkdGg6IDc1JTtcclxuICB9XHJcbiAgLmFib3V0VGV4dCB7XHJcbiAgICBtYXJnaW4tdG9wOiAyNXB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG59XHJcbi8qIFRhYmxldCAqL1xyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDI1cHgpIGFuZCAobWluLXdpZHRoOiA2MDFweCkge1xyXG4gIC5hYm91dFVzIHtcclxuICAgIG1hcmdpbjogMTUwcHggYXV0byAxNTBweCBhdXRvO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIC5hYm91dEltZyB7XHJcbiAgICB3aWR0aDogNDUlO1xyXG4gIH1cclxuICAuYWJvdXRUZXh0IHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxufVxyXG5cclxuLyogTWFpbiBTdHlsaW5nICovXHJcbi5hYm91dFJvdyB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWZsb3c6IHJvdyB3cmFwO1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG59XHJcblxyXG4uYWJvdXRDYXJkIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n\n<div class=\"contactUs\">\n  <mat-card class=\"contactCard\">\n    <mat-card-header>\n      <mat-card-title>Contact Us</mat-card-title>\n    </mat-card-header>\n\n    <mat-card-content class=\"contactContent\">\n      <div class=\"contactRow\">\n        <div class=\"contactPhone\">\n          <i class=\"fas fa-phone-alt fa-2x\"></i>\n\n          <a href=\"#\"><h6>555-555-5555</h6></a>\n        </div>\n        <div class=\"contactEmail\">\n          <i class=\"far fa-envelope fa-2x\"></i>\n          <a href=\"#\"><h6>fakeEmail@fakeDomain.com</h6></a>\n        </div>\n        <div class=\"contactAddress\">\n          <i class=\"far fa-address-card fa-2x\"></i>\n          <h6>\n            <strong>Sully Selections</strong>\n            <br />\n            123 Fake Address St\n            <br />\n            Anytown, ID 12345\n            <br />\n          </h6>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n\n<div class=\"contactUs\">\n  <mat-card class=\"contactCard\">\n    <mat-card-header>\n      <mat-card-title>Contact Us</mat-card-title>\n    </mat-card-header>\n    <mat-card-content class=\"contactContent\">\n      <div class=\"contactRow\">\n        <div class=\"contactPhone\">\n          <i class=\"fas fa-phone-alt fa-2x\"></i>\n\n          <a href=\"#\"><h6>555-555-5555</h6></a>\n        </div>\n        <div class=\"contactEmail\">\n          <i class=\"far fa-envelope fa-2x\"></i>\n          <a href=\"#\"><h6>fakeEmail@fakeDomain.com</h6></a>\n        </div>\n        <div class=\"contactAddress\">\n          <i class=\"far fa-address-card fa-2x\"></i>\n          <h6>\n            <strong>Sully Selections</strong>\n            <br />\n            123 Fake Address St\n            <br />\n            Anytown, ID 12345\n            <br />\n          </h6>\n        </div>\n      </div>\n    </mat-card-content>\n  </mat-card>\n</div>\n");
 
 /***/ }),
 
@@ -295,13 +295,12 @@ __webpack_require__.r(__webpack_exports__);
 
 let ContactUsComponent = class ContactUsComponent {
     constructor() { }
-    ngOnInit() {
-    }
+    ngOnInit() { }
 };
 ContactUsComponent.ctorParameters = () => [];
 ContactUsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-contact-us',
+        selector: "app-contact-us",
         template: _raw_loader_contact_us_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_contact_us_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
     })
@@ -509,8 +508,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { MatTabsModule } from '@angular/material/tabs';
-// import { MatTableModule } from "@angular/material/table";
 // Angular Material Finish
 let AppModule = class AppModule {
 };
@@ -550,15 +547,11 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_material_form_field__WEBPACK_IMPORTED_MODULE_29__["MatFormFieldModule"],
             _angular_material_slider__WEBPACK_IMPORTED_MODULE_30__["MatSliderModule"],
             _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_31__["MatSidenavModule"]
-            // MatTabsModule,
-            // MatTableModule,
             // End Angular Materials
         ],
         providers: [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_9__["CookieService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
-        entryComponents: [
-        // BeerDialogComponent
-        ],
+        entryComponents: [],
     })
 ], AppModule);
 
@@ -711,7 +704,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n\n<div>\n  <header>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"warn\">\n\n      <div class=\"logoWide\">\n        <img\n        src=\"../../assets/images/sully-Logo-Wide-Inverted.png\"\n        alt=\"Alternate logo for Sully Selections\"\n        (click)=\"navigateHome()\"\n      />\n      </div>\n      <div *ngIf=\"mobile\" class=\"mobileNav\">\n        <button mat-icon-button [matMenuTriggerFor]=\"belowMenu\" aria-label=\"Example icon-button with a menu\">\n          <i class=\"fas fa-bars fa-2x\"></i>\n        </button>\n        <mat-menu #belowMenu=\"matMenu\">\n          <button mat-button (click)=\"navigateHome()\">\n            <mat-icon id=\"iconMargin\">home</mat-icon>\n            <span>Home</span>\n          </button>\n          <br>\n          <button mat-button (click)=\"navigateBeerList()\">\n            <mat-icon id=\"iconMargin\">local_drink</mat-icon>\n            <span>Available Beer</span>\n          </button>\n          <br>\n          <button mat-button (click)=\"navigateAbout()\">\n            <mat-icon id=\"iconMargin\">business</mat-icon>\n            <span>About Us</span>\n          </button>\n          <br>\n          <button mat-button (click)=\"navigateContact()\">\n            <mat-icon id=\"iconMargin\">email</mat-icon>\n            <span>Contact Us</span>\n          </button>\n        </mat-menu>\n      </div>\n        <div *ngIf=\"!mobile\">\n          <div class=\"navigation\">\n            <button mat-button (click)=\"navigateHome()\">\n              <mat-icon id=\"iconMargin\">home</mat-icon>\n              <span>Home</span>\n            </button>\n            <button mat-button (click)=\"navigateBeerList()\">\n              <mat-icon id=\"iconMargin\">local_drink</mat-icon>\n              <span>Available Beer</span>\n            </button>\n            <button mat-button (click)=\"navigateAbout()\">\n              <mat-icon id=\"iconMargin\">business</mat-icon>\n              <span>About Us</span>\n            </button>\n            <button mat-button (click)=\"navigateContact()\">\n              <mat-icon id=\"iconMargin\">email</mat-icon>\n              <span>Contact Us</span>\n            </button>\n          </div>\n        </div>\n    </mat-toolbar>\n  </header>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n\n<div>\n  <header>\n    <mat-toolbar class=\"menu\" role=\"header\" color=\"warn\">\n      <div class=\"logoWide\">\n        <img\n          src=\"../../assets/images/sully-Logo-Wide-Inverted.png\"\n          alt=\"Alternate logo for Sully Selections\"\n          (click)=\"navigateHome()\"\n        />\n      </div>\n      <div *ngIf=\"mobile\" class=\"mobileNav\">\n        <button\n          mat-icon-button\n          [matMenuTriggerFor]=\"belowMenu\"\n          aria-label=\"Example icon-button with a menu\"\n        >\n          <i class=\"fas fa-bars fa-2x\"></i>\n        </button>\n        <mat-menu #belowMenu=\"matMenu\">\n          <button mat-button (click)=\"navigateHome()\">\n            <mat-icon id=\"iconMargin\">home</mat-icon>\n            <span>Home</span>\n          </button>\n          <br />\n          <button mat-button (click)=\"navigateBeerList()\">\n            <mat-icon id=\"iconMargin\">local_drink</mat-icon>\n            <span>Available Beer</span>\n          </button>\n          <br />\n          <button mat-button (click)=\"navigateAbout()\">\n            <mat-icon id=\"iconMargin\">business</mat-icon>\n            <span>About Us</span>\n          </button>\n          <br />\n          <button mat-button (click)=\"navigateContact()\">\n            <mat-icon id=\"iconMargin\">email</mat-icon>\n            <span>Contact Us</span>\n          </button>\n        </mat-menu>\n      </div>\n      <div *ngIf=\"!mobile\">\n        <div class=\"navigation\">\n          <button mat-button (click)=\"navigateHome()\">\n            <mat-icon id=\"iconMargin\">home</mat-icon>\n            <span>Home</span>\n          </button>\n          <button mat-button (click)=\"navigateBeerList()\">\n            <mat-icon id=\"iconMargin\">local_drink</mat-icon>\n            <span>Available Beer</span>\n          </button>\n          <button mat-button (click)=\"navigateAbout()\">\n            <mat-icon id=\"iconMargin\">business</mat-icon>\n            <span>About Us</span>\n          </button>\n          <button mat-button (click)=\"navigateContact()\">\n            <mat-icon id=\"iconMargin\">email</mat-icon>\n            <span>Contact Us</span>\n          </button>\n        </div>\n      </div>\n    </mat-toolbar>\n  </header>\n</div>\n");
 
 /***/ }),
 
@@ -772,7 +765,7 @@ AboutUsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n\n<div class=\"beerPage\">\n  <!-- Filter -->\n  <mat-drawer-container class=\"filter-Section\">\n    <mat-drawer #drawer class=\"filter-Sidenav\" mode=\"side\">\n      <!-- Search by name -->\n      <mat-form-field class=\"search-form-field\">\n        <mat-label>Search by name</mat-label>\n        <input\n          matInput\n          type=\"text\"\n          [(ngModel)]=\"selectedFilter.name\"\n          (keydown)=\"applyFilter('search', selectedFilter)\"\n        />\n        <button\n          mat-button\n          *ngIf=\"selectedFilter.name\"\n          matSuffix\n          mat-icon-button\n          aria-label=\"Clear\"\n          (click)=\"clearedSearch()\"\n        >\n          <mat-icon>close</mat-icon>\n        </button>\n      </mat-form-field>\n\n      <!-- Bitterness Slider -->\n      <div class=\"bitterness-Slider\">\n        <label class=\"form-label\" for=\"customRange1\">Bitterness Level</label>\n        <br />\n        <mat-slider\n          thumbLabel\n          [displayWith]=\"formatLabel\"\n          min=\"1\"\n          max=\"300\"\n          step=\"5\"\n          values=\"1,300\"\n          [(ngModel)]=\"selectedFilter.bitterness\"\n          (click)=\"applyFilter('slider', selectedFilter)\"\n        ></mat-slider>\n      </div>\n\n      <!-- Alcohol Content -->\n      <mat-form-field appearance=\"fill\" class=\"Alcohol-form-field\">\n        <mat-label>Alcohol Content</mat-label>\n        <select\n          color=\"primary\"\n          matNativeControl\n          [(ngModel)]=\"selectedFilter.alcoholContent\"\n          (click)=\"applyFilter('select', selectedFilter)\"\n        >\n          <option value=\"\" selected></option>\n          <option value=\"Greater\">Greater than 5%</option>\n          <option value=\"Lesser\">Less than 5%</option>\n        </select>\n      </mat-form-field>\n    </mat-drawer>\n\n    <div class=\"filter-Sidenav-Button\">\n      <button\n        type=\"button\"\n        mat-raised-button\n        color=\"primary\"\n        (click)=\"drawer.toggle()\"\n      >\n        Filters\n      </button>\n    </div>\n\n    <!-- Beer List -->\n\n    <div class=\"beerList\">\n      <div class=\"beerRow\">\n        <div *ngFor=\"let beer of beerList\">\n          <div class=\"beerTile\">\n            <a class=\"\" (click)=\"openDialog(beer)\">\n              <div class=\"beerCard\">\n                <div class=\"\">\n                  <img\n                    mat-card-image\n                    src=\"{{ beer.image_url }}\"\n                    alt=\"Image of {{ beer.name }} bottle\"\n                    class=\"beerImage\"\n                  />\n                </div>\n                <div class=\"beerContent textCenter\">\n                  <h6>{{ beer.name }}</h6>\n                  <p>\n                    {{ beer.tagline }}\n                  </p>\n                  <hr />\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- Pagination -->\n    <div class=\"pagDiv\">\n      <nav aria-label=\"Page navigation\">\n        <ul class=\"pagination justify-content-center\">\n          <li class=\"page-item\" [class.disabled]=\"prevDisable\">\n            <a class=\"page-link\" (click)=\"previousPage()\">Previous</a>\n          </li>\n          <li class=\"page-item\">\n            <a class=\"page-link\">Page {{ pageNumber }}</a>\n          </li>\n          <li class=\"page-item\" [class.disabled]=\"nextDisable\">\n            <a class=\"page-link\" (click)=\"nextPage()\">Next</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n    <!-- End Pagination -->\n  </mat-drawer-container>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--\n============================================\n; Title: RW Punk API Technical Challenge\n; Author: Jason Sullenger\n; Date: 11/01/2021\n; Description: General Website. Calls Punk API.\n; Users can filter and search.\n;===========================================\n-->\n<div class=\"beerPage\">\n  <!-- Filter -->\n  <mat-drawer-container class=\"filter-Section\">\n    <mat-drawer #drawer class=\"filter-Sidenav\" mode=\"side\">\n      <!-- Search by name -->\n      <mat-form-field class=\"search-form-field\">\n        <mat-label>Search by name</mat-label>\n        <input\n          matInput\n          type=\"text\"\n          [(ngModel)]=\"selectedFilter.name\"\n          (keydown)=\"applyFilter('search', selectedFilter)\"\n        />\n        <button\n          mat-button\n          *ngIf=\"selectedFilter.name\"\n          matSuffix\n          mat-icon-button\n          aria-label=\"Clear\"\n          (click)=\"clearedSearch()\"\n        >\n          <mat-icon>close</mat-icon>\n        </button>\n      </mat-form-field>\n      <!-- Bitterness Slider -->\n      <div class=\"bitterness-Slider\">\n        <label class=\"form-label\" for=\"customRange1\">Bitterness Level</label>\n        <br />\n        <mat-slider\n          thumbLabel\n          [displayWith]=\"formatLabel\"\n          min=\"1\"\n          max=\"300\"\n          step=\"5\"\n          values=\"1,300\"\n          [(ngModel)]=\"selectedFilter.bitterness\"\n          (click)=\"applyFilter('slider', selectedFilter)\"\n        ></mat-slider>\n      </div>\n      <!-- Alcohol Content -->\n      <mat-form-field appearance=\"fill\" class=\"Alcohol-form-field\">\n        <mat-label>Alcohol Content</mat-label>\n        <select\n          color=\"primary\"\n          matNativeControl\n          [(ngModel)]=\"selectedFilter.alcoholContent\"\n          (click)=\"applyFilter('select', selectedFilter)\"\n        >\n          <option value=\"\" selected></option>\n          <option value=\"Greater\">Greater than 5%</option>\n          <option value=\"Lesser\">Less than 5%</option>\n        </select>\n      </mat-form-field>\n    </mat-drawer>\n    <div class=\"filter-Sidenav-Button\">\n      <button\n        type=\"button\"\n        mat-raised-button\n        color=\"primary\"\n        (click)=\"drawer.toggle()\"\n      >\n        Filters\n      </button>\n    </div>\n    <!-- Beer List -->\n    <div class=\"beerList\">\n      <div class=\"beerRow\">\n        <div *ngFor=\"let beer of beerList\">\n          <div class=\"beerTile\">\n            <a class=\"\" (click)=\"openDialog(beer)\">\n              <div class=\"beerCard\">\n                <div class=\"\">\n                  <img\n                    mat-card-image\n                    src=\"{{ beer.image_url }}\"\n                    alt=\"Image of {{ beer.name }} bottle\"\n                    class=\"beerImage\"\n                  />\n                </div>\n                <div class=\"beerContent textCenter\">\n                  <h6>{{ beer.name }}</h6>\n                  <p>\n                    {{ beer.tagline }}\n                  </p>\n                  <hr />\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- Pagination -->\n    <div class=\"pagDiv\">\n      <nav aria-label=\"Page navigation\">\n        <ul class=\"pagination justify-content-center\">\n          <li class=\"page-item\" [class.disabled]=\"prevDisable\">\n            <a class=\"page-link\" (click)=\"previousPage()\">Previous</a>\n          </li>\n          <li class=\"page-item\">\n            <a class=\"page-link\">Page {{ pageNumber }}</a>\n          </li>\n          <li class=\"page-item\" [class.disabled]=\"nextDisable\">\n            <a class=\"page-link\" (click)=\"nextPage()\">Next</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n    <!-- End Pagination -->\n  </mat-drawer-container>\n</div>\n");
 
 /***/ }),
 
@@ -900,7 +893,9 @@ let BeerResultsComponent = class BeerResultsComponent {
         this.pageNumber = pgNum;
         console.log(this.selectedFilter);
         if (this.selectedFilter) {
-            this.api.callNextPage(pgNum, this.selectedFilter, this.selectedFilter.bitterness).subscribe((data) => {
+            this.api
+                .callNextPage(pgNum, this.selectedFilter, this.selectedFilter.bitterness)
+                .subscribe((data) => {
                 this.beerList = data;
                 this.disableNext(data);
             });
@@ -986,17 +981,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let BeerDialogComponent = class BeerDialogComponent {
-    // brew: any = {
-    //   name: "",
-    //   image_url: "",
-    //   first_brewed: "",
-    //   abv: "",
-    //   ibu: "",
-    //   contributed_by: "",
-    //   food_pairing: "",
-    //   volume: "",
-    //   description: "",
-    // }
     constructor(dialogRef, router) {
         this.dialogRef = dialogRef;
         this.router = router;
@@ -1118,14 +1102,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-
-0; // ============================================
+// ============================================
 // ; Title: RW Punk API Technical Challenge
 // ; Author: Jason Sullenger
 // ; Date: 11/01/2021
 // ; Description: General Website. Calls Punk API.
 // ; Users can filter and search.
 // ;===========================================
+
 
 
 let APICallService = class APICallService {
@@ -1165,7 +1149,10 @@ let APICallService = class APICallService {
             }
         }
         else if (filter.bitterness) {
-            return this.http.get("https://api.punkapi.com/v2/beers?ibu_lt=" + bittNum + "&per_page=12&page=" + pgNum);
+            return this.http.get("https://api.punkapi.com/v2/beers?ibu_lt=" +
+                bittNum +
+                "&per_page=12&page=" +
+                pgNum);
         }
         else {
             return this.http.get("https://api.punkapi.com/v2/beers?page=" + pgNum + "&per_page=12");

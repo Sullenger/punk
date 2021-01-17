@@ -40,8 +40,6 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSliderModule } from "@angular/material/slider"
 import { MatSidenavModule } from '@angular/material/sidenav';
-// import { MatTabsModule } from '@angular/material/tabs';
-// import { MatTableModule } from "@angular/material/table";
 
 // Angular Material Finish
 
@@ -80,14 +78,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatFormFieldModule,
     MatSliderModule,
     MatSidenavModule
-    // MatTabsModule,
-    // MatTableModule,
     // End Angular Materials
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
   entryComponents: [
-    // BeerDialogComponent
   ],
 })
 export class AppModule {}

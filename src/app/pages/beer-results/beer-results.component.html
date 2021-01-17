@@ -7,7 +7,6 @@
 ; Users can filter and search.
 ;===========================================
 -->
-
 <div class="beerPage">
   <!-- Filter -->
   <mat-drawer-container class="filter-Section">
@@ -32,7 +31,6 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-
       <!-- Bitterness Slider -->
       <div class="bitterness-Slider">
         <label class="form-label" for="customRange1">Bitterness Level</label>
@@ -48,7 +46,6 @@
           (click)="applyFilter('slider', selectedFilter)"
         ></mat-slider>
       </div>
-
       <!-- Alcohol Content -->
       <mat-form-field appearance="fill" class="Alcohol-form-field">
         <mat-label>Alcohol Content</mat-label>
@@ -64,7 +61,6 @@
         </select>
       </mat-form-field>
     </mat-drawer>
-
     <div class="filter-Sidenav-Button">
       <button
         type="button"
@@ -75,9 +71,7 @@
         Filters
       </button>
     </div>
-
     <!-- Beer List -->
-
     <div class="beerList">
       <div class="beerRow">
         <div *ngFor="let beer of beerList">
@@ -105,7 +99,6 @@
         </div>
       </div>
     </div>
-
     <!-- Pagination -->
     <div class="pagDiv">
       <nav aria-label="Page navigation">

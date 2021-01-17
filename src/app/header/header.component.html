@@ -11,16 +11,19 @@
 <div>
   <header>
     <mat-toolbar class="menu" role="header" color="warn">
-
       <div class="logoWide">
         <img
-        src="../../assets/images/sully-Logo-Wide-Inverted.png"
-        alt="Alternate logo for Sully Selections"
-        (click)="navigateHome()"
-      />
+          src="../../assets/images/sully-Logo-Wide-Inverted.png"
+          alt="Alternate logo for Sully Selections"
+          (click)="navigateHome()"
+        />
       </div>
       <div *ngIf="mobile" class="mobileNav">
-        <button mat-icon-button [matMenuTriggerFor]="belowMenu" aria-label="Example icon-button with a menu">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="belowMenu"
+          aria-label="Example icon-button with a menu"
+        >
           <i class="fas fa-bars fa-2x"></i>
         </button>
         <mat-menu #belowMenu="matMenu">
@@ -28,43 +31,43 @@
             <mat-icon id="iconMargin">home</mat-icon>
             <span>Home</span>
           </button>
-          <br>
+          <br />
           <button mat-button (click)="navigateBeerList()">
             <mat-icon id="iconMargin">local_drink</mat-icon>
             <span>Available Beer</span>
           </button>
-          <br>
+          <br />
           <button mat-button (click)="navigateAbout()">
             <mat-icon id="iconMargin">business</mat-icon>
             <span>About Us</span>
           </button>
-          <br>
+          <br />
           <button mat-button (click)="navigateContact()">
             <mat-icon id="iconMargin">email</mat-icon>
             <span>Contact Us</span>
           </button>
         </mat-menu>
       </div>
-        <div *ngIf="!mobile">
-          <div class="navigation">
-            <button mat-button (click)="navigateHome()">
-              <mat-icon id="iconMargin">home</mat-icon>
-              <span>Home</span>
-            </button>
-            <button mat-button (click)="navigateBeerList()">
-              <mat-icon id="iconMargin">local_drink</mat-icon>
-              <span>Available Beer</span>
-            </button>
-            <button mat-button (click)="navigateAbout()">
-              <mat-icon id="iconMargin">business</mat-icon>
-              <span>About Us</span>
-            </button>
-            <button mat-button (click)="navigateContact()">
-              <mat-icon id="iconMargin">email</mat-icon>
-              <span>Contact Us</span>
-            </button>
-          </div>
+      <div *ngIf="!mobile">
+        <div class="navigation">
+          <button mat-button (click)="navigateHome()">
+            <mat-icon id="iconMargin">home</mat-icon>
+            <span>Home</span>
+          </button>
+          <button mat-button (click)="navigateBeerList()">
+            <mat-icon id="iconMargin">local_drink</mat-icon>
+            <span>Available Beer</span>
+          </button>
+          <button mat-button (click)="navigateAbout()">
+            <mat-icon id="iconMargin">business</mat-icon>
+            <span>About Us</span>
+          </button>
+          <button mat-button (click)="navigateContact()">
+            <mat-icon id="iconMargin">email</mat-icon>
+            <span>Contact Us</span>
+          </button>
         </div>
+      </div>
     </mat-toolbar>
   </header>
 </div>
