@@ -12,11 +12,3 @@ app.use("/", express.static(path.join(__dirname, "/dist/rw-punk-challenge")));
 http.createServer(app).listen(port, function() {
   console.log(`Application started and listing on port: ${port}`);
 });
-
-// app.use(express.static(__dirname + '/dist/rw-punk-challenge'));
-
-// app.get('/*', (req,res) => res.sendFile(path.join(__dirname + "/dist/rw-punk-challenge/index.html")))
-
-// const server = http.createServer(app)
-
-// server.listen(port, () => console.log('Server Running'));

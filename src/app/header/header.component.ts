@@ -20,10 +20,9 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.mobile = null
+    this.mobile = null;
     if (window.screen.width < 1025) {
       this.mobile = true;
-      console.log("Mobile device? " + this.mobile);
     }
   }
 

@@ -39,10 +39,30 @@ export class APICallService {
     );
   }
 
-  filterBitterness(bittNum) {
-    return this.http.get(
-      "https://api.punkapi.com/v2/beers?ibu_lt=" + bittNum + "&per_page=12"
-    );
+  filterBitterness(object) {
+    console.log(object);
+    if (object.max && object.min) {
+      console.log("API Called");
+      return this.http.get(
+        "https://api.punkapi.com/v2/beers?ibu_lt=" +
+          object.max +
+          "&ibu_gt=" +
+          object.min +
+          "&per_page=12"
+      );
+    }
+    if (object.max && !object.min) {
+      return this.http.get(
+        "https://api.punkapi.com/v2/beers?ibu_lt=" + object.max + "&per_page=12"
+      );
+    } else {
+      return this.http.get(
+        "https://api.punkapi.com/v2/beers?" +
+          "ibu_gt=" +
+          object.min +
+          "&per_page=12"
+      );
+    }
   }
   0;
   callNextPage(pgNum, filter, bittNum) {
@@ -64,12 +84,32 @@ export class APICallService {
         );
       }
     } else if (filter.bitterness) {
-      return this.http.get(
-        "https://api.punkapi.com/v2/beers?ibu_lt=" +
-          bittNum +
-          "&per_page=12&page=" +
-          pgNum
-      );
+      if (filter.bitterness.max && filter.bitterness.min) {
+        return this.http.get(
+          "https://api.punkapi.com/v2/beers?ibu_lt=" +
+            filter.bitterness.max +
+            "&ibu_gt=" +
+            filter.bitterness.min +
+            "&per_page=12&page=" +
+            pgNum
+        );
+      }
+      if (filter.bitterness.max && !filter.bitterness.min) {
+        return this.http.get(
+          "https://api.punkapi.com/v2/beers?ibu_lt=" +
+            filter.bitterness.max +
+            "&per_page=12&page=" +
+            pgNum
+        );
+      } else {
+        return this.http.get(
+          "https://api.punkapi.com/v2/beers?" +
+            "ibu_gt=" +
+            filter.bitterness.min +
+            "&per_page=12&page=" +
+            pgNum
+        );
+      }
     } else {
       return this.http.get(
         "https://api.punkapi.com/v2/beers?page=" + pgNum + "&per_page=12"

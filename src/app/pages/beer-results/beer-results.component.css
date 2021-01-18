@@ -27,6 +27,9 @@
   .beerImage {
     height: 300px;
   }
+  .bitterness-Range {
+    padding: 30px 0px;
+  }
 }
 /* Phone */
 @media screen and (max-width: 600px) {
@@ -50,6 +53,9 @@
   .beerImage {
     height: 300px;
   }
+  .bitterness-Range {
+    padding: 40px 0px;
+  }
 }
 /* Tablet */
 @media screen and (max-width: 1025px) and (min-width: 601px) {
@@ -69,6 +75,9 @@
   }
   .beerImage {
     height: 250px;
+  }
+  .bitterness-Range {
+    padding: 30px 0px;
   }
 }
 
@@ -90,10 +99,6 @@
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
   -ms-transform: scale(1.01);
-}
-
-mat-slider {
-  width: 90%;
 }
 
 /* Pagination */

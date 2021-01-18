@@ -31,11 +31,60 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <!-- Bitterness Slider -->
-      <div class="bitterness-Slider">
-        <label class="form-label" for="customRange1">Bitterness Level</label>
+      <br />
+      <!-- Bitterness Range -->
+      <div class="bitterness-Range">
+        <mat-form-field class="rangeRow">
+          <input
+            class="rangeInput"
+            matInput
+            type="text"
+            [(ngModel)]="selectedFilter.bitterness.min"
+            placeholder="Minimum"
+          />
+          <button
+            mat-button
+            *ngIf="selectedFilter.bitterness.min"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="clearedRange('min')"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
         <br />
-        <mat-slider
+        <mat-form-field class="rangeRow">
+          <input
+            class="rangeInput"
+            matInput
+            type="text"
+            [(ngModel)]="selectedFilter.bitterness.max"
+            placeholder="Maximum"
+          />
+          <button
+            mat-button
+            *ngIf="selectedFilter.bitterness.max"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="clearedRange('max')"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="example-button-row">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="applyFilter('range', selectedFilter)"
+          >
+            Submit Range
+          </button>
+        </div>
+
+        <!-- <mat-slider
           thumbLabel
           [displayWith]="formatLabel"
           min="1"
@@ -44,8 +93,9 @@
           values="1,300"
           [(ngModel)]="selectedFilter.bitterness"
           (click)="applyFilter('slider', selectedFilter)"
-        ></mat-slider>
+        ></mat-slider> -->
       </div>
+      <br />
       <!-- Alcohol Content -->
       <mat-form-field appearance="fill" class="Alcohol-form-field">
         <mat-label>Alcohol Content</mat-label>
@@ -98,6 +148,7 @@
         </div>
       </div>
     </div>
+
     <!-- Pagination -->
     <div class="pagDiv">
       <nav aria-label="Page navigation">
